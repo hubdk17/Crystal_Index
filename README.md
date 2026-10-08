@@ -36,8 +36,8 @@
 
 ## 📌 Executive Summary (BLUF)
 
-1. **Leakage Audit & Flaw Invalidation:** We audit historical benchmark training protocols on the MatBench dielectric task ($N = 4{,}764$), demonstrating that a previously logged $0.2068$ MAE on Fold 0 was an artifact of test-set monitoring during checkpoint selection. Under strict fold-local preprocessing and inner-validation checkpointing, the true audited CGCNN 5-fold mean is $0.3298 \pm 0.0800$ MAE.
-2. **Classical Baseline Outperforms Standard GNN:** An audited RBF-SVR pipeline operating on 153 Magpie, space-group, and Sine Coulomb descriptors achieves an MAE of $0.3124 \pm 0.0812$, outperforming standard CGCNN while training ~61× faster on identical hardware.
+1. **Leakage Audit & Baseline Clarification:** We audit baseline training protocols on the MatBench dielectric task ($N = 4{,}764$), demonstrating that an initial $0.2068$ Fold 0 metric in early exploratory scripts was an artifact of test-set monitoring during checkpoint selection. Under strict fold-local preprocessing and inner-validation checkpointing, our in-house implementation of canonical CGCNN yields an audited 5-fold mean of $0.3298 \pm 0.0800$ MAE.
+2. **Classical Baseline Outperforms In-House CGCNN:** An audited RBF-SVR pipeline operating on 153 Magpie, space-group, and Sine Coulomb descriptors achieves an MAE of $0.3124 \pm 0.0812$, outperforming our in-house CGCNN baseline while training ~61× faster on identical hardware.
 3. **DualHead–LogDirect GNN:** We introduce a hierarchical crystal-graph architecture integrating:
    - 8 tabulated elemental ground-state physical priors ($X, r, m, g, \text{row}, \text{IE}, V_{\mathrm{mol}}, \text{ox}_{\max}$).
    - 58-dimensional edge channels (41 radial RBFs, inverse distance, and 16 Chebyshev 3-body bond-angle projections).
