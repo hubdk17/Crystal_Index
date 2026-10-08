@@ -9,7 +9,7 @@ def main():
 **Article Type**: Original Research Article  
 **Author**: Daksh Kaila (Corresponding Author; Undergraduate Student, Department of Computer Science and Engineering, Thapar Institute of Engineering and Technology, Patiala, Punjab 147004, India; Email: `dkaila_be25@thapar.edu`)  
 **Primary Publication Model**: Single Frozen DualHead--LogDirect GNN (`DualHead_LogDirect_GNN`)  
-**Archived Release**: [Zenodo (DOI: 10.5281/zenodo.10892345)](https://doi.org/10.5281/zenodo.10892345) | [GitHub Repository](https://github.com/anonymous/materials_dielectric_gnn_audit)  
+**Repository**: [GitHub Repository](https://github.com/hubdk17/Crystal_Index)  
 **LaTeX Source**: [`manuscript/manuscript.tex`](file:///d:/Desktop/Material_science_qml/manuscript/manuscript.tex)  
 **Supplementary Information**: [`manuscript/supplementary_information.tex`](file:///d:/Desktop/Material_science_qml/manuscript/supplementary_information.tex)  
 **BibTeX References**: [`manuscript/references.bib`](file:///d:/Desktop/Material_science_qml/manuscript/references.bib)  
@@ -263,7 +263,7 @@ Several limitations must be underscored: (1) The prediction target is a scalar b
 Conceptualization, Methodology, Software, Internal Reproducibility Audit, Data Analysis, Visualization, Writing - Original Draft, and Writing - Review & Editing: D.K.
 
 ### Availability of Data and Materials
-All benchmark crystal structures and target dielectric properties originate from the publicly available MatBench v0.1 repository (https://matbench.materialsproject.org). The archived release is available at [Zenodo (DOI: 10.5281/zenodo.10892345)](https://doi.org/10.5281/zenodo.10892345) and the code repository is available at [GitHub (anonymous archive retained through peer review)](https://github.com/anonymous/materials_dielectric_gnn_audit), with frozen cryptographic SHA-256 signatures.
+All benchmark crystal structures and target dielectric properties originate from the publicly available MatBench v0.1 repository (https://matbench.materialsproject.org). The reproduction suite and trained models are available at [GitHub Repository](https://github.com/hubdk17/Crystal_Index), with frozen cryptographic SHA-256 signatures.
 
 ### Financial Support and Sponsorship
 This work was supported by computational resources at the Thapar Institute of Engineering and Technology. No external funding directly influenced the design, execution, or interpretation of this study.
