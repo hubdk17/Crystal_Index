@@ -1,0 +1,23 @@
+{
+  "timestamp": "2026-09-23T13:08:49.662731",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "packages": {
+    "torch": "2.14.0+cu126",
+    "torch_cuda_available": true,
+    "numpy": "2.4.6",
+    "scipy": "1.17.1",
+    "pandas": "2.3.3",
+    "pymatgen": "2025.x",
+    "matminer": "0.10.1",
+    "matbench": "0.6"
+  },
+  "hardware": {
+    "os_name": "nt",
+    "cpu_count": 16,
+    "cpu_architecture": "AMD64",
+    "processor": "Intel64 Family 6 Model 197 Stepping 2, GenuineIntel"
+  },
+  "execution_device": "cpu",
+  "cpu_worker_threads": 16
+}

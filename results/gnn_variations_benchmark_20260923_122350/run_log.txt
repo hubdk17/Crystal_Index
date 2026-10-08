@@ -1,0 +1,184 @@
+[12:23:50] ================================================================================
+[12:23:50] ADVANCED CRYSTAL GNN VARIATIONS — LEAKAGE-FREE FIVE-FOLD BENCHMARK
+[12:23:50] ================================================================================
+[12:23:50] Isolated run directory: d:\Desktop\Material_science_qml\results\gnn_variations_benchmark_20260923_122350
+[12:23:50] Device: cpu (16 worker threads)
+[12:23:50] 
+Loading official MatbenchBenchmark('matbench_v0.1', subset=['matbench_dielectric']) ...
+[12:23:52] Loaded 4764 materials from official benchmark.
+[12:23:52] 
+Precomputing crystal graphs with R_cut=6.0 A, k=12, and elemental physics priors ...
+[12:24:12] Precomputed and cached 4764 graphs in 19.92s.
+[12:24:12] 
+############################################################
+[12:24:12] ### EXECUTING OFFICIAL FOLD 0 / 4
+[12:24:12] ############################################################
+[12:24:12] 
+--- Training CGCNN_Baseline (Fold 0) ---
+[12:26:15]   Best Val MAE: 0.4767 at epoch 24 (Fit time: 120.9s)
+[12:26:15]   Outer Test -> MAE: 0.2239 | MedAE: 0.0847 | RMSE: 0.7008 | R2: 0.5613 | rho: 0.9360
+[12:26:15] 
+--- Training PE_Attn_CGNN (Fold 0) ---
+[12:27:22]   Best Val MAE: 0.4585 at epoch 19 (Fit time: 67.2s)
+[12:27:22]   Outer Test -> MAE: 0.2097 | MedAE: 0.0794 | RMSE: 0.6695 | R2: 0.5996 | rho: 0.9531
+[12:27:22] 
+--- Training Global_CGNN (Fold 0) ---
+[12:28:28]   Best Val MAE: 0.4385 at epoch 24 (Fit time: 65.2s)
+[12:28:28]   Outer Test -> MAE: 0.1945 | MedAE: 0.0699 | RMSE: 0.6586 | R2: 0.6126 | rho: 0.9519
+[12:28:28] 
+--- Training Log_CGNN (Fold 0) ---
+[12:29:35]   Best Val MAE: 0.4476 at epoch 18 (Fit time: 67.5s)
+[12:29:35]   Outer Test -> MAE: 0.2011 | MedAE: 0.0688 | RMSE: 0.6743 | R2: 0.5939 | rho: 0.9585
+[12:29:35] 
+--- Constructing Ensemble-GNN (Fold 0) ---
+[12:29:35]   Model PE_Attn_CGNN weight: 0.3257 (Val MAE: 0.4585)
+[12:29:35]   Model Global_CGNN weight: 0.3406 (Val MAE: 0.4385)
+[12:29:35]   Model Log_CGNN weight: 0.3336 (Val MAE: 0.4476)
+[12:29:35]   Ensemble_GNN Test -> MAE: 0.1883 | MedAE: 0.0638 | RMSE: 0.6559 | R2: 0.6158
+[12:29:35] 
+############################################################
+[12:29:35] ### EXECUTING OFFICIAL FOLD 1 / 4
+[12:29:35] ############################################################
+[12:29:36] 
+--- Training CGCNN_Baseline (Fold 1) ---
+[12:31:39]   Best Val MAE: 0.3239 at epoch 25 (Fit time: 123.6s)
+[12:31:39]   Outer Test -> MAE: 0.3037 | MedAE: 0.0927 | RMSE: 1.1013 | R2: 0.4129 | rho: 0.9117
+[12:31:39] 
+--- Training PE_Attn_CGNN (Fold 1) ---
+[12:32:48]   Best Val MAE: 0.3126 at epoch 19 (Fit time: 68.1s)
+[12:32:48]   Outer Test -> MAE: 0.2698 | MedAE: 0.0774 | RMSE: 1.0731 | R2: 0.4426 | rho: 0.9368
+[12:32:48] 
+--- Training Global_CGNN (Fold 1) ---
+[12:33:54]   Best Val MAE: 0.3142 at epoch 18 (Fit time: 66.0s)
+[12:33:54]   Outer Test -> MAE: 0.2676 | MedAE: 0.0809 | RMSE: 1.0445 | R2: 0.4719 | rho: 0.9303
+[12:33:54] 
+--- Training Log_CGNN (Fold 1) ---
+[12:35:02]   Best Val MAE: 0.3026 at epoch 16 (Fit time: 68.0s)
+[12:35:02]   Outer Test -> MAE: 0.2723 | MedAE: 0.0782 | RMSE: 1.0703 | R2: 0.4455 | rho: 0.9349
+[12:35:02] 
+--- Constructing Ensemble-GNN (Fold 1) ---
+[12:35:02]   Model PE_Attn_CGNN weight: 0.3303 (Val MAE: 0.3126)
+[12:35:02]   Model Global_CGNN weight: 0.3286 (Val MAE: 0.3142)
+[12:35:02]   Model Log_CGNN weight: 0.3412 (Val MAE: 0.3026)
+[12:35:02]   Ensemble_GNN Test -> MAE: 0.2554 | MedAE: 0.0664 | RMSE: 1.0553 | R2: 0.4609
+[12:35:02] 
+############################################################
+[12:35:02] ### EXECUTING OFFICIAL FOLD 2 / 4
+[12:35:02] ############################################################
+[12:35:02] 
+--- Training CGCNN_Baseline (Fold 2) ---
+[12:37:05]   Best Val MAE: 0.4036 at epoch 23 (Fit time: 122.6s)
+[12:37:05]   Outer Test -> MAE: 0.4535 | MedAE: 0.0782 | RMSE: 2.9635 | R2: 0.0872 | rho: 0.8968
+[12:37:05] 
+--- Training PE_Attn_CGNN (Fold 2) ---
+[12:38:13]   Best Val MAE: 0.3664 at epoch 22 (Fit time: 67.5s)
+[12:38:13]   Outer Test -> MAE: 0.4233 | MedAE: 0.0700 | RMSE: 2.9397 | R2: 0.1017 | rho: 0.9181
+[12:38:13] 
+--- Training Global_CGNN (Fold 2) ---
+[12:39:19]   Best Val MAE: 0.3654 at epoch 21 (Fit time: 65.7s)
+[12:39:19]   Outer Test -> MAE: 0.4154 | MedAE: 0.0686 | RMSE: 2.9414 | R2: 0.1007 | rho: 0.9169
+[12:39:19] 
+--- Training Log_CGNN (Fold 2) ---
+[12:40:27]   Best Val MAE: 0.3793 at epoch 22 (Fit time: 68.2s)
+[12:40:27]   Outer Test -> MAE: 0.4221 | MedAE: 0.0608 | RMSE: 2.9479 | R2: 0.0967 | rho: 0.9214
+[12:40:27] 
+--- Constructing Ensemble-GNN (Fold 2) ---
+[12:40:27]   Model PE_Attn_CGNN weight: 0.3368 (Val MAE: 0.3664)
+[12:40:27]   Model Global_CGNN weight: 0.3377 (Val MAE: 0.3654)
+[12:40:27]   Model Log_CGNN weight: 0.3254 (Val MAE: 0.3793)
+[12:40:27]   Ensemble_GNN Test -> MAE: 0.4088 | MedAE: 0.0579 | RMSE: 2.9404 | R2: 0.1013
+[12:40:27] 
+############################################################
+[12:40:27] ### EXECUTING OFFICIAL FOLD 3 / 4
+[12:40:27] ############################################################
+[12:40:27] 
+--- Training CGCNN_Baseline (Fold 3) ---
+[12:42:28]   Best Val MAE: 0.2852 at epoch 23 (Fit time: 120.6s)
+[12:42:28]   Outer Test -> MAE: 0.3269 | MedAE: 0.0726 | RMSE: 2.2848 | R2: 0.1259 | rho: 0.9441
+[12:42:28] 
+--- Training PE_Attn_CGNN (Fold 3) ---
+[12:43:36]   Best Val MAE: 0.2498 at epoch 21 (Fit time: 67.4s)
+[12:43:36]   Outer Test -> MAE: 0.3130 | MedAE: 0.0686 | RMSE: 2.2845 | R2: 0.1262 | rho: 0.9563
+[12:43:36] 
+--- Training Global_CGNN (Fold 3) ---
+[12:44:42]   Best Val MAE: 0.2520 at epoch 25 (Fit time: 65.9s)
+[12:44:42]   Outer Test -> MAE: 0.3040 | MedAE: 0.0642 | RMSE: 2.2751 | R2: 0.1333 | rho: 0.9596
+[12:44:42] 
+--- Training Log_CGNN (Fold 3) ---
+[12:45:49]   Best Val MAE: 0.2486 at epoch 24 (Fit time: 67.1s)
+[12:45:50]   Outer Test -> MAE: 0.3118 | MedAE: 0.0613 | RMSE: 2.2977 | R2: 0.1160 | rho: 0.9597
+[12:45:50] 
+--- Constructing Ensemble-GNN (Fold 3) ---
+[12:45:50]   Model PE_Attn_CGNN weight: 0.3338 (Val MAE: 0.2498)
+[12:45:50]   Model Global_CGNN weight: 0.3309 (Val MAE: 0.2520)
+[12:45:50]   Model Log_CGNN weight: 0.3354 (Val MAE: 0.2486)
+[12:45:50]   Ensemble_GNN Test -> MAE: 0.2962 | MedAE: 0.0530 | RMSE: 2.2816 | R2: 0.1284
+[12:45:50] 
+############################################################
+[12:45:50] ### EXECUTING OFFICIAL FOLD 4 / 4
+[12:45:50] ############################################################
+[12:45:50] 
+--- Training CGCNN_Baseline (Fold 4) ---
+[12:47:52]   Best Val MAE: 0.3258 at epoch 21 (Fit time: 122.8s)
+[12:47:53]   Outer Test -> MAE: 0.3371 | MedAE: 0.0880 | RMSE: 1.6245 | R2: 0.1939 | rho: 0.8984
+[12:47:53] 
+--- Training PE_Attn_CGNN (Fold 4) ---
+[12:49:01]   Best Val MAE: 0.3017 at epoch 25 (Fit time: 68.4s)
+[12:49:01]   Outer Test -> MAE: 0.3193 | MedAE: 0.0714 | RMSE: 1.6118 | R2: 0.2065 | rho: 0.9150
+[12:49:01] 
+--- Training Global_CGNN (Fold 4) ---
+[12:50:10]   Best Val MAE: 0.2896 at epoch 25 (Fit time: 68.8s)
+[12:50:11]   Outer Test -> MAE: 0.3128 | MedAE: 0.0677 | RMSE: 1.6248 | R2: 0.1936 | rho: 0.9193
+[12:50:11] 
+--- Training Log_CGNN (Fold 4) ---
+[12:51:45]   Best Val MAE: 0.3014 at epoch 25 (Fit time: 94.2s)
+[12:51:45]   Outer Test -> MAE: 0.3215 | MedAE: 0.0642 | RMSE: 1.6419 | R2: 0.1765 | rho: 0.9205
+[12:51:45] 
+--- Constructing Ensemble-GNN (Fold 4) ---
+[12:51:45]   Model PE_Attn_CGNN weight: 0.3286 (Val MAE: 0.3017)
+[12:51:45]   Model Global_CGNN weight: 0.3424 (Val MAE: 0.2896)
+[12:51:45]   Model Log_CGNN weight: 0.3290 (Val MAE: 0.3014)
+[12:51:45]   Ensemble_GNN Test -> MAE: 0.3029 | MedAE: 0.0594 | RMSE: 1.6196 | R2: 0.1987
+[12:51:45] 
+Saved all fold results to d:\Desktop\Material_science_qml\results\gnn_variations_benchmark_20260923_122350\tables\advanced_gnns_5fold_results.csv
+[12:51:45] Saved all predictions to d:\Desktop\Material_science_qml\results\gnn_variations_benchmark_20260923_122350\predictions\advanced_gnns_all_predictions.csv
+[12:51:45] 
+================================================================================
+[12:51:45] FIVE-FOLD BENCHMARK SUMMARY TABLE:
+[12:51:45] ================================================================================
+[12:51:45] Model Architecture MAE (Mean +/- SD) MedAE (Mean +/- SD) RMSE (Mean +/- SD)  R2 (Mean +/- SD) Spearman rho (Mean +/- SD) Fraction n < 1.0 Mean Fit Time
+    CGCNN_Baseline 0.3290 +/- 0.0825   0.0832 +/- 0.0080  1.7349 +/- 0.9076 0.2763 +/- 0.2032          0.9174 +/- 0.0216             0.0%        122.1s
+      PE_Attn_CGNN 0.3070 +/- 0.0783   0.0734 +/- 0.0048  1.7157 +/- 0.9138 0.2953 +/- 0.2170          0.9359 +/- 0.0192             0.0%         67.7s
+       Global_CGNN 0.2989 +/- 0.0801   0.0702 +/- 0.0063  1.7089 +/- 0.9208 0.3024 +/- 0.2270          0.9356 +/- 0.0193             0.0%         66.3s
+          Log_CGNN 0.3057 +/- 0.0804   0.0667 +/- 0.0072  1.7264 +/- 0.9169 0.2857 +/- 0.2219          0.9390 +/- 0.0192             0.0%         73.0s
+      Ensemble_GNN 0.2903 +/- 0.0804   0.0601 +/- 0.0052  1.7105 +/- 0.9204 0.3010 +/- 0.2263          0.9414 +/- 0.0195             0.0%        207.0s
+[12:51:45] 
+Analyzing binned error across refractive index regimes ...
+[12:51:45] 
+Binned Performance Breakdown:
+[12:51:45] Refractive Index Regime  Sample Count  CGCNN_Baseline MAE  CGCNN_Baseline MedAE  PE_Attn_CGNN MAE  PE_Attn_CGNN MedAE  Global_CGNN MAE  Global_CGNN MedAE  Log_CGNN MAE  Log_CGNN MedAE  Ensemble_GNN MAE  Ensemble_GNN MedAE
+               n <= 2.0          2229              0.1091                0.0484            0.0999              0.0449           0.0960             0.0402        0.0949          0.0355            0.0905              0.0350
+         2.0 < n <= 3.0          1790              0.1649                0.1105            0.1468              0.0971           0.1367             0.0919        0.1460          0.0937            0.1277              0.0808
+         3.0 < n <= 5.0           609              0.4370                0.2816            0.4007              0.2589           0.4022             0.2397        0.4093          0.2609            0.3726              0.2254
+         5.0 < n <= 7.0            84              1.4622                1.1335            1.2366              0.9688           1.1797             0.6893        1.2672          0.8822            1.1888              0.7796
+                n > 7.0            52             12.3107                7.3363           12.0999              6.9062          11.9433             6.7365       12.0776          7.0176           12.0406              6.7127
+[12:51:45] 
+Computing Wilcoxon signed-rank and paired t-tests vs CGCNN Baseline ...
+[12:51:46] 
+Statistical Significance Tests:
+[12:51:46]   Comparison vs CGCNN_Baseline Mean Absolute Error Reduction Median Absolute Error Reduction  Wilcoxon W Wilcoxon p-value  Paired t-statistic Paired t-test p-value Statistically Significant (p < 0.05)
+PE_Attn_CGNN vs CGCNN_Baseline                        0.0220                          0.0073   6569484.0         2.24e-21            7.282936              3.80e-13                                  YES
+ Global_CGNN vs CGCNN_Baseline                        0.0302                          0.0108   6852154.0         1.34e-35            8.574753              1.33e-17                                  YES
+    Log_CGNN vs CGCNN_Baseline                        0.0233                          0.0129   6870805.0         1.13e-36            6.844954              8.62e-12                                  YES
+Ensemble_GNN vs CGCNN_Baseline                        0.0387                          0.0169   7611179.0         9.62e-93           13.300233              1.17e-39                                  YES
+[12:51:46] 
+Generating publication figures ...
+[12:51:48]   Saved parity plot to d:\Desktop\Material_science_qml\results\gnn_variations_benchmark_20260923_122350\figures\oof_parity_plots_all_models.png
+[12:51:49]   Saved tail error plot to d:\Desktop\Material_science_qml\results\gnn_variations_benchmark_20260923_122350\figures\error_vs_refractive_index.png
+[12:51:50]   Saved comparison chart to d:\Desktop\Material_science_qml\results\gnn_variations_benchmark_20260923_122350\figures\model_comparison_bar_chart.png
+[12:51:50]   Saved validation convergence curve to d:\Desktop\Material_science_qml\results\gnn_variations_benchmark_20260923_122350\figures\validation_loss_curves.png
+[12:51:50] 
+================================================================================
+[12:51:50] ADVANCED GNN BENCHMARK RUN COMPLETED SUCCESSFULLY!
+[12:51:50] Artifacts and tables sealed in: d:\Desktop\Material_science_qml\results\gnn_variations_benchmark_20260923_122350
+[12:51:50] ================================================================================

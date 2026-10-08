@@ -1,0 +1,8 @@
+Research Highlights for Computational Materials Science:
+(Note: Elsevier requires 3 to 5 bullet points, each with a maximum of 85 characters including spaces)
+
+• Strict nested validation audits and excludes a test-monitored GNN result. (75 chars)
+• RBF-SVR baseline outperforms standard CGCNN on the MatBench dielectric task. (79 chars)
+• DualHead-LogDirect GNN achieves a 0.2909 MAE development-stage accuracy. (73 chars)
+• Chemical-system-disjoint evaluation retains robust rank order (rho = 0.9331). (78 chars)
+• Identifies extreme heteroskedasticity and scale underprediction for n > 8.0. (79 chars)

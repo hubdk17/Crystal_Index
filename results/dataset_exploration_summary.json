@@ -1,0 +1,790 @@
+{
+  "generated_at": "2026-09-23T01:46:52.333574",
+  "python_version": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "datasets_loaded": [
+    "dielectric_constant",
+    "piezoelectric_tensor",
+    "elastic_tensor_2015",
+    "matbench_dielectric",
+    "matbench_log_gvrh",
+    "phonon_dielectric_mp"
+  ],
+  "dataset_shapes": {
+    "dielectric_constant": [
+      1056,
+      16
+    ],
+    "piezoelectric_tensor": [
+      941,
+      13
+    ],
+    "elastic_tensor_2015": [
+      1181,
+      20
+    ],
+    "matbench_dielectric": [
+      4764,
+      2
+    ],
+    "matbench_log_gvrh": [
+      10987,
+      2
+    ],
+    "phonon_dielectric_mp": [
+      1296,
+      6
+    ]
+  },
+  "dataset_info": {
+    "dielectric_constant": {
+      "shape": [
+        1056,
+        16
+      ],
+      "columns": [
+        {
+          "column": "material_id",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "mp-441"
+        },
+        {
+          "column": "formula",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Rb2Te"
+        },
+        {
+          "column": "nsites",
+          "dtype": "int64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "3"
+        },
+        {
+          "column": "space_group",
+          "dtype": "int64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "225"
+        },
+        {
+          "column": "volume",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "159.501207678"
+        },
+        {
+          "column": "structure",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Full Formula (Rb2 Te1)\nReduced Formula: Rb2Te\nabc   :   6.087322   6.087322   6."
+        },
+        {
+          "column": "band_gap",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "1.88"
+        },
+        {
+          "column": "e_electronic",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "[[3.44115795, -3.097e-05, -6.276e-05], [-2.837e-05, 3.44128161, 5.59900000000000"
+        },
+        {
+          "column": "e_total",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "[[6.23414745, -0.00035252, -9.796e-05], [-0.00034992, 6.235412869999999, 2.48099"
+        },
+        {
+          "column": "n",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "1.86"
+        },
+        {
+          "column": "poly_electronic",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "3.44"
+        },
+        {
+          "column": "poly_total",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "6.23"
+        },
+        {
+          "column": "pot_ferroelectric",
+          "dtype": "bool",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "False"
+        },
+        {
+          "column": "cif",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "#\\#CIF1.1\n######################################################################"
+        },
+        {
+          "column": "meta",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "{u'incar': u'NELM = 100\\nIBRION = 8\\nLWAVE = False\\nSIGMA = 0.05\\nMAGMOM = 3*0.6"
+        },
+        {
+          "column": "poscar",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Rb2 Te1\n1.0\n5.271776 0.000000 3.043661\n1.757259 4.970278 3.043661\n0.000000 0.000"
+        }
+      ]
+    },
+    "piezoelectric_tensor": {
+      "shape": [
+        941,
+        13
+      ],
+      "columns": [
+        {
+          "column": "material_id",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "mp-22925"
+        },
+        {
+          "column": "formula",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "AgI"
+        },
+        {
+          "column": "nsites",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "2.0"
+        },
+        {
+          "column": "point_group",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "-43m"
+        },
+        {
+          "column": "space_group",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "216.0"
+        },
+        {
+          "column": "volume",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "73.2195833241"
+        },
+        {
+          "column": "structure",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Full Formula (Ag1 I1)\nReduced Formula: AgI\nabc   :   4.695848   4.695848   4.695"
+        },
+        {
+          "column": "eij_max",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "0.091464"
+        },
+        {
+          "column": "v_max",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "[1.0, 1.0, 1.0]"
+        },
+        {
+          "column": "piezoelectric_tensor",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "[[ 0.       0.       0.      -0.15842  0.       0.     ]\n [ 0.       0.       0."
+        },
+        {
+          "column": "cif",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "#generated using pymatgen\ndata_AgI\n_symmetry_space_group_name_H-M   'P 1'\n_cell_"
+        },
+        {
+          "column": "meta",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "{u'nsites': 2, u'space_group': 216, u'material_id': u'mp-22925', u'point_group':"
+        },
+        {
+          "column": "poscar",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Ag1 I1\n1.0\n4.066724 0.000000 2.347924\n1.355575 3.834144 2.347924\n0.000000 0.0000"
+        }
+      ]
+    },
+    "elastic_tensor_2015": {
+      "shape": [
+        1181,
+        20
+      ],
+      "columns": [
+        {
+          "column": "material_id",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "mp-10003"
+        },
+        {
+          "column": "formula",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Nb4CoSi"
+        },
+        {
+          "column": "nsites",
+          "dtype": "int64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "12"
+        },
+        {
+          "column": "space_group",
+          "dtype": "int64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "124"
+        },
+        {
+          "column": "volume",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "194.419802449"
+        },
+        {
+          "column": "structure",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Full Formula (Nb8 Co2 Si2)\nReduced Formula: Nb4CoSi\nabc   :   6.221780   6.22178"
+        },
+        {
+          "column": "elastic_anisotropy",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "0.0306879170543"
+        },
+        {
+          "column": "G_Reuss",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "96.8445345574"
+        },
+        {
+          "column": "G_VRH",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "97.1416044794"
+        },
+        {
+          "column": "G_Voigt",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "97.43867440129999"
+        },
+        {
+          "column": "K_Reuss",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "194.267622778"
+        },
+        {
+          "column": "K_VRH",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "194.26888435900003"
+        },
+        {
+          "column": "K_Voigt",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "194.27014594099998"
+        },
+        {
+          "column": "poisson_ratio",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "0.28570074251999994"
+        },
+        {
+          "column": "compliance_tensor",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "[[ 4.38529309e-03 -1.60706936e-03 -1.05529927e-03  0.00000000e+00\n   1.92242440e"
+        },
+        {
+          "column": "elastic_tensor",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "[[ 3.11335146e+02  1.44450926e+02  1.26175581e+02  0.00000000e+00\n  -1.10347467e"
+        },
+        {
+          "column": "elastic_tensor_original",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "[[ 3.11335146e+02  1.44450926e+02  1.26175581e+02  0.00000000e+00\n  -1.10347467e"
+        },
+        {
+          "column": "cif",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "#\\#CIF1.1\n######################################################################"
+        },
+        {
+          "column": "kpoint_density",
+          "dtype": "int64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "7000"
+        },
+        {
+          "column": "poscar",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Nb8 Co2 Si2\n1.0\n6.221780 0.000000 0.000000\n0.000000 6.221780 0.000000\n0.000000 0"
+        }
+      ]
+    },
+    "matbench_dielectric": {
+      "shape": [
+        4764,
+        2
+      ],
+      "columns": [
+        {
+          "column": "structure",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Full Formula (K6 S6)\nReduced Formula: KS\nabc   :   8.586083   8.586083   5.92085"
+        },
+        {
+          "column": "n",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "1.752063640396657"
+        }
+      ]
+    },
+    "matbench_log_gvrh": {
+      "shape": [
+        10987,
+        2
+      ],
+      "columns": [
+        {
+          "column": "structure",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Full Formula (Ca1 Ag2 Ge2)\nReduced Formula: Ca(AgGe)2\nabc   :   4.377179   4.377"
+        },
+        {
+          "column": "log10(G_VRH)",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "1.4471580313422192"
+        }
+      ]
+    },
+    "phonon_dielectric_mp": {
+      "shape": [
+        1296,
+        6
+      ],
+      "columns": [
+        {
+          "column": "mpid",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "mp-1000"
+        },
+        {
+          "column": "eps_electronic",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "6.311555304676412"
+        },
+        {
+          "column": "eps_total",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "12.773453841404539"
+        },
+        {
+          "column": "last phdos peak",
+          "dtype": "float64",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "98.58577122703691"
+        },
+        {
+          "column": "structure",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "Full Formula (Ba1 Te1)\nReduced Formula: BaTe\nabc   :   5.013216   5.013216   5.0"
+        },
+        {
+          "column": "formula",
+          "dtype": "object",
+          "null_count": 0,
+          "null_pct": 0.0,
+          "sample": "BaTe"
+        }
+      ]
+    }
+  },
+  "target_statistics": {
+    "dielectric_constant.n": {
+      "count": 1056,
+      "mean": 2.4349,
+      "std": 1.1488,
+      "min": 1.28,
+      "25%": 1.77,
+      "50%": 2.19,
+      "75%": 2.73,
+      "max": 16.03,
+      "skew": 4.6615,
+      "kurtosis": 38.6811
+    },
+    "dielectric_constant.poly_electronic": {
+      "count": 1056,
+      "mean": 7.248,
+      "std": 13.0549,
+      "min": 1.63,
+      "25%": 3.13,
+      "50%": 4.79,
+      "75%": 7.44,
+      "max": 256.84,
+      "skew": 12.3375,
+      "kurtosis": 197.8811
+    },
+    "dielectric_constant.poly_total": {
+      "count": 1056,
+      "mean": 14.7779,
+      "std": 19.4353,
+      "min": 2.08,
+      "25%": 7.5575,
+      "50%": 10.54,
+      "75%": 15.4825,
+      "max": 277.78,
+      "skew": 7.8069,
+      "kurtosis": 81.8511
+    },
+    "dielectric_constant.band_gap": {
+      "count": 1056,
+      "mean": 2.1194,
+      "std": 1.6049,
+      "min": 0.11,
+      "25%": 0.89,
+      "50%": 1.73,
+      "75%": 2.885,
+      "max": 8.32,
+      "skew": 1.2003,
+      "kurtosis": 1.1545
+    },
+    "piezoelectric_tensor.eij_max": {
+      "count": 941,
+      "mean": 0.7629,
+      "std": 2.3064,
+      "min": 0.0,
+      "25%": 0.0942,
+      "50%": 0.2477,
+      "75%": 0.6837,
+      "max": 46.1929,
+      "skew": 12.7181,
+      "kurtosis": 209.555
+    },
+    "piezoelectric_tensor.log_1_plus_eij_max": {
+      "count": 941,
+      "mean": 0.3922,
+      "std": 0.4599,
+      "min": 0.0,
+      "max": 3.8542,
+      "skew": 2.5235
+    },
+    "elastic_tensor_2015.G_VRH": {
+      "count": 1181,
+      "mean": 67.5431,
+      "std": 44.5794,
+      "min": 2.7222,
+      "25%": 34.118,
+      "50%": 59.7352,
+      "75%": 91.3321,
+      "max": 522.9212,
+      "skew": 1.8158,
+      "kurtosis": 9.995
+    },
+    "elastic_tensor_2015.K_VRH": {
+      "count": 1181,
+      "mean": 136.2597,
+      "std": 72.887,
+      "min": 6.4761,
+      "25%": 76.4353,
+      "50%": 130.3828,
+      "75%": 189.5742,
+      "max": 435.6615,
+      "skew": 0.4606,
+      "kurtosis": -0.1242
+    },
+    "elastic_tensor_2015.poisson_ratio": {
+      "count": 1181,
+      "mean": 0.2874,
+      "std": 0.0622,
+      "min": 0.0426,
+      "25%": 0.2492,
+      "50%": 0.2902,
+      "75%": 0.3288,
+      "max": 0.4675,
+      "skew": -0.3,
+      "kurtosis": 0.4632
+    },
+    "elastic_tensor_2015.elastic_anisotropy": {
+      "count": 1181,
+      "mean": 2.145,
+      "std": 19.1401,
+      "min": 0.0,
+      "25%": 0.145,
+      "50%": 0.3553,
+      "75%": 0.9231,
+      "max": 397.2979,
+      "skew": 16.3822,
+      "kurtosis": 282.4263
+    },
+    "elastic_tensor_2015.log10_G_VRH": {
+      "count": 1181,
+      "mean": 1.7283,
+      "std": 0.3227,
+      "min": 0.4349,
+      "max": 2.7184,
+      "skew": -0.7725
+    },
+    "matbench_dielectric.n": {
+      "count": 4764,
+      "mean": 2.4283,
+      "std": 2.1017,
+      "min": 1.0,
+      "25%": 1.6846,
+      "50%": 2.0608,
+      "75%": 2.5953,
+      "max": 62.063,
+      "skew": 15.3599,
+      "kurtosis": 342.2116
+    },
+    "matbench_log_gvrh.log10(G_VRH)": {
+      "count": 10987,
+      "mean": 1.5536,
+      "std": 0.3716,
+      "min": 0.0,
+      "25%": 1.3424,
+      "50%": 1.5798,
+      "75%": 1.8261,
+      "max": 2.7185,
+      "skew": -0.6653,
+      "kurtosis": 0.8132
+    }
+  },
+  "structure_complexity": {
+    "dielectric_constant": {
+      "count": 1056,
+      "mean_nsites": 7.53,
+      "std_nsites": 3.39,
+      "min_nsites": 2,
+      "max_nsites": 20,
+      "median_nsites": 8
+    },
+    "piezoelectric_tensor": {
+      "count": 941,
+      "mean_nsites": 7.98,
+      "std_nsites": 3.14,
+      "min_nsites": 2,
+      "max_nsites": 14,
+      "median_nsites": 8
+    },
+    "elastic_tensor_2015": {
+      "count": 1181,
+      "mean_nsites": 12.43,
+      "std_nsites": 11.82,
+      "min_nsites": 2,
+      "max_nsites": 152,
+      "median_nsites": 10
+    },
+    "matbench_dielectric": {
+      "count": 4764,
+      "mean_nsites": 16.89,
+      "std_nsites": 14.67,
+      "min_nsites": 1,
+      "max_nsites": 288,
+      "median_nsites": 12
+    },
+    "matbench_log_gvrh": {
+      "count": 10987,
+      "mean_nsites": 8.63,
+      "std_nsites": 8.66,
+      "min_nsites": 1,
+      "max_nsites": 160,
+      "median_nsites": 6
+    },
+    "phonon_dielectric_mp": {
+      "count": 1296,
+      "mean_nsites": 7.43,
+      "std_nsites": 3.79,
+      "min_nsites": 2,
+      "max_nsites": 48,
+      "median_nsites": 8
+    }
+  },
+  "cross_references": {
+    "dielectric_constant \u2229 piezoelectric_tensor": {
+      "count": 202,
+      "fraction_of_a": 19.1,
+      "fraction_of_b": 21.5
+    },
+    "dielectric_constant \u2229 elastic_tensor_2015": {
+      "count": 49,
+      "fraction_of_a": 4.6,
+      "fraction_of_b": 4.1
+    },
+    "piezoelectric_tensor \u2229 elastic_tensor_2015": {
+      "count": 46,
+      "fraction_of_a": 4.9,
+      "fraction_of_b": 3.9
+    }
+  },
+  "spacegroup_distribution": {
+    "dielectric_constant": {
+      "n_unique_spacegroups": 85,
+      "top5": {
+        "225": 117,
+        "194": 77,
+        "166": 70,
+        "164": 70,
+        "148": 49
+      }
+    },
+    "elastic_tensor_2015": {
+      "n_unique_spacegroups": 87,
+      "top5": {
+        "221": 150,
+        "194": 135,
+        "225": 116,
+        "62": 77,
+        "139": 76
+      }
+    },
+    "piezoelectric_tensor": {
+      "n_unique_spacegroups": 63,
+      "top5": {
+        "216.0": 107,
+        "36.0": 69,
+        "82.0": 62,
+        "1.0": 56,
+        "186.0": 55
+      }
+    }
+  },
+  "quality_report": {
+    "dielectric_constant": {
+      "n_issues": 1,
+      "issues": [
+        "Duplicate formulas: 92"
+      ],
+      "total_nulls": 0
+    },
+    "piezoelectric_tensor": {
+      "n_issues": 1,
+      "issues": [
+        "Duplicate formulas: 143"
+      ],
+      "total_nulls": 0
+    },
+    "elastic_tensor_2015": {
+      "n_issues": 1,
+      "issues": [
+        "Duplicate formulas: 94"
+      ],
+      "total_nulls": 0
+    },
+    "matbench_dielectric": {
+      "n_issues": 0,
+      "issues": [],
+      "total_nulls": 0
+    },
+    "matbench_log_gvrh": {
+      "n_issues": 0,
+      "issues": [],
+      "total_nulls": 0
+    },
+    "phonon_dielectric_mp": {
+      "n_issues": 1,
+      "issues": [
+        "Duplicate formulas: 106"
+      ],
+      "total_nulls": 0
+    }
+  }
+}

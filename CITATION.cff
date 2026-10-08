@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "This repository contains original, reproducible scientific research. If you use or adapt this codebase, model architectures, trained checkpoints, or benchmark data, please cite it as below."
+authors:
+  - family-names: "Kaila"
+    given-names: "Daksh"
+    affiliation: "Department of Computer Science and Engineering, Thapar Institute of Engineering and Technology, Patiala, Punjab 147004, India"
+    email: "dkaila_be25@thapar.edu"
+title: "Reproducible Crystal-Graph Learning for Refractive-Index Prediction and Chemical-System-Disjoint Evaluation in Inorganic Materials"
+version: 1.0.0
+date-released: 2026-10-08
+url: "https://github.com/hubdk17/Crystal_Index"
+repository-code: "https://github.com/hubdk17/Crystal_Index"
+keywords:
+  - "materials informatics"
+  - "crystal graph neural networks"
+  - "refractive index"
+  - "dielectric properties"
+  - "matbench"
+  - "reproducibility"
+  - "chemical-system-disjoint evaluation"
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "Kaila"
+      given-names: "Daksh"
+      affiliation: "Department of Computer Science and Engineering, Thapar Institute of Engineering and Technology, Patiala, Punjab 147004, India"
+      email: "dkaila_be25@thapar.edu"
+  title: "Reproducible Crystal-Graph Learning for Refractive-Index Prediction and Chemical-System-Disjoint Evaluation in Inorganic Materials"
+  journal: "Computational Materials Science"
+  publisher: "Elsevier"
+  year: 2026

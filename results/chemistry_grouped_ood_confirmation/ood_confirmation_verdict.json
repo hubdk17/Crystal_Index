@@ -1,0 +1,19 @@
+{
+  "benchmark": "matbench_v0.1_matbench_dielectric_GroupKFold_OOD",
+  "model": "DualHead_LogDirect_GNN",
+  "split_type": "GroupKFold_by_chemical_system",
+  "n_samples": 4764,
+  "n_unique_chemical_systems": 3169,
+  "zero_chemical_system_overlap": true,
+  "ood_5fold_mae_mean": 0.29734913381110656,
+  "ood_5fold_mae_std": 0.023739937437026605,
+  "ood_5fold_medae_mean": 0.06921285390853882,
+  "ood_5fold_medae_std": 0.0032368456035001877,
+  "ood_rmse_mean": 1.885255828362628,
+  "ood_r2_mean": 0.19046652622510335,
+  "ood_spearman_rho_mean": 0.9330572064016229,
+  "standard_matbench_mae": 0.2909,
+  "mae_degradation": 0.006449133811106567,
+  "pct_degradation": 2.216959027537493,
+  "safe_interpretation": "The frozen model was evaluated under chemistry-grouped OOD splits to assess extrapolation to unseen chemical systems. This supplementary result is not directly comparable with MatBench leaderboard scores."
+}

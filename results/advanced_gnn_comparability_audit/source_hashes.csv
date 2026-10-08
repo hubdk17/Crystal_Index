@@ -1,0 +1,6 @@
+file_path,sha256,size_bytes,last_modified
+src/09_train_advanced_gnn_variations.py,1dfea35a64202c7a5c78b21dc55953b5e134cd2dfff75ceffe91a9ca2b7a4168,45003,2026-09-23T12:23:24.412202
+src/08_adversarial_reproducibility_audit.py,c890c1901baa1e225805cb641bdc3c8fd6fa6aed02d005a945bb33a76870bdba,78331,2026-09-23T12:04:19.202444
+src/06_train_crystal_gnn.py,a6a70f686e33f7d950662043ccee312137e01bb0d34a7d7787b908d5968e9fb3,18952,2026-09-23T02:30:10.090998
+src/04_classical_baselines.py,aadfae99cfb4f58f5be3c849b19b18b5ec954dfd6d506f20c372b929fde5aae6,7623,2026-09-23T01:55:54.367038
+src/02_featurize_materials.py,0b789bec5bb512ec8e10e6353de6c908fd1058c4f5e90c35b820ed3db0d1a24c,6745,2026-09-23T01:59:20.365562

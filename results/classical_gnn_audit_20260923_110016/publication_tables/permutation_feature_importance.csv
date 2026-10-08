@@ -1,0 +1,16 @@
+rank,feature,importance_mean,importance_std
+1,density,0.13344,0.00783
+2,vpa,0.07939,0.00609
+3,MagpieData avg_dev Electronegativity,0.02598,0.00346
+4,MagpieData avg_dev NpValence,0.02189,0.00439
+5,MagpieData mean CovalentRadius,0.02116,0.00323
+6,MagpieData maximum NpValence,0.01743,0.00232
+7,MagpieData avg_dev NdUnfilled,0.01589,0.00312
+8,MagpieData avg_dev NpUnfilled,0.01487,0.00206
+9,packing fraction,0.01349,0.00304
+10,MagpieData mean Row,0.01277,0.00402
+11,MagpieData mode Electronegativity,0.01238,0.00123
+12,MagpieData range NpValence,0.01193,0.00191
+13,MagpieData mean GSmagmom,0.00971,0.00106
+14,MagpieData maximum Electronegativity,0.00955,0.00232
+15,MagpieData mean GSvolume_pa,0.00925,0.00197

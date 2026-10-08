@@ -1,0 +1,13 @@
+model,n_rows,c1_exact_4764,c2_unique_materials_4764,c3_official_folds_match,c4_zero_duplicates,c5_zero_nans_infs,c6_y_true_canonical_match,max_target_diff,all_integrity_passed
+Angle_Aware_CGNN,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+MultiHead_GraphTransformer,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+Hierarchical_Global_GNN,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+DualHead_LogDirect_GNN,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+Ensemble_NNLS,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+Ensemble_InvVal,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+CGCNN_Baseline,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+PE_Attn_CGNN,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+Global_CGNN,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+Log_CGNN,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+Ensemble_GNN,4764,True,True,True,True,True,True,3.552713678800501e-15,True
+Grand_MultiParadigm_Ensemble,4764,True,True,True,True,True,True,3.552713678800501e-15,True

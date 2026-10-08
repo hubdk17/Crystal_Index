@@ -1,0 +1,11 @@
+model,bin,count,pct_of_dataset,MAE,MedAE,RMSE,Bias
+CGCNN-style Periodic Crystal GNN,n <= 2,2229,46.79,0.1103,0.0536,0.3735,0.0484
+CGCNN-style Periodic Crystal GNN,2 < n <= 3,1790,37.57,0.1635,0.1121,0.2434,-0.0237
+CGCNN-style Periodic Crystal GNN,3 < n <= 5,609,12.78,0.46,0.3009,0.6547,-0.179
+CGCNN-style Periodic Crystal GNN,5 < n <= 7,84,1.76,1.3969,1.0019,1.8548,-1.2859
+CGCNN-style Periodic Crystal GNN,n > 7,52,1.09,12.2154,7.2509,17.7805,-12.2154
+RBF SVR,n <= 2,2229,46.79,0.1248,0.0731,0.3337,0.0644
+RBF SVR,2 < n <= 3,1790,37.57,0.1602,0.1148,0.2295,0.0253
+RBF SVR,3 < n <= 5,609,12.78,0.3676,0.2305,0.5508,-0.0988
+RBF SVR,5 < n <= 7,84,1.76,1.0815,0.5985,1.579,-0.9084
+RBF SVR,n > 7,52,1.09,11.7067,6.7879,17.6126,-11.6544

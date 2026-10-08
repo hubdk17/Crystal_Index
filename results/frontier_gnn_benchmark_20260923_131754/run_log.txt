@@ -1,0 +1,18 @@
+[13:17:54] ================================================================================
+[13:17:54] FRONTIER CRYSTAL GNN BENCHMARK & MULTI-PARADIGM LOSS EXPLORATION
+[13:17:54] TARGET: CHALLENGE THE BENCHMARK RECORD (MODNet: 0.2711 MAE)
+[13:17:54] ================================================================================
+[13:17:54] Isolated run directory: d:\Desktop\Material_science_qml\results\frontier_gnn_benchmark_20260923_131754
+[13:17:54] Device: cpu (16 worker threads)
+[13:17:54] 
+Loading official MatbenchBenchmark('matbench_v0.1', subset=['matbench_dielectric']) ...
+[13:18:03] Loaded 4764 materials from official benchmark.
+[13:18:03] 
+Precomputing frontier crystal graphs with Chebyshev angles and 12-dim macroscopic physics ...
+[13:21:47] Precomputed and cached 4764 frontier graphs in 224.87s.
+[13:21:47] 
+############################################################
+[13:21:47] ### EXECUTING OFFICIAL FOLD 0 / 4
+[13:21:47] ############################################################
+[13:21:48] 
+--- Training Angle_Aware_CGNN (Fold 0) ---

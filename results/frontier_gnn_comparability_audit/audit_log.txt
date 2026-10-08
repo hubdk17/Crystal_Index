@@ -1,0 +1,45 @@
+[14:49:44] ================================================================================
+[14:49:44] FRONTIER CRYSTAL GNN COMPARABILITY & REPRODUCIBILITY AUDIT
+[14:49:44] ================================================================================
+[14:49:44] Auditing latest frontier benchmark run: d:\Desktop\Material_science_qml\results\frontier_gnn_benchmark_20260923_133231
+[14:49:44] Loaded 28584 prediction rows across models: ['Angle_Aware_CGNN', 'MultiHead_GraphTransformer', 'Hierarchical_Global_GNN', 'DualHead_LogDirect_GNN', 'Ensemble_NNLS', 'Ensemble_InvVal']
+[14:49:53] Recomputed fold metrics saved to d:\Desktop\Material_science_qml\results\frontier_gnn_comparability_audit\recomputed_fold_metrics.csv
+[14:49:53] 
+================================================================================
+[14:49:53] RECOMPUTED 5-FOLD BENCHMARK RESULTS
+[14:49:53] ================================================================================
+[14:49:53] Angle_Aware_CGNN           | MAE: 0.3004 +/- 0.0848 | MedAE: 0.0666 +/- 0.0043 | R2: 0.2896 | rho: 0.9289
+[14:49:53] MultiHead_GraphTransformer | MAE: 0.3600 +/- 0.0860 | MedAE: 0.1122 +/- 0.0073 | R2: 0.2800 | rho: 0.9079
+[14:49:53] Hierarchical_Global_GNN    | MAE: 0.2917 +/- 0.0802 | MedAE: 0.0647 +/- 0.0044 | R2: 0.2941 | rho: 0.9347
+[14:49:53] DualHead_LogDirect_GNN     | MAE: 0.2909 +/- 0.0860 | MedAE: 0.0631 +/- 0.0023 | R2: 0.3061 | rho: 0.9395
+[14:49:53] Ensemble_NNLS              | MAE: 0.2899 +/- 0.0853 | MedAE: 0.0649 +/- 0.0048 | R2: 0.3012 | rho: 0.9389
+[14:49:53] Ensemble_InvVal            | MAE: 0.2847 +/- 0.0830 | MedAE: 0.0604 +/- 0.0037 | R2: 0.3047 | rho: 0.9401
+[14:49:53] 
+================================================================================
+[14:49:53] LEADERBOARD HEAD-TO-HEAD COMPARISON
+[14:49:53] ================================================================================
+[14:49:53] Best Frontier Model: Ensemble_InvVal
+[14:49:53]   5-Fold MAE: 0.2847 +/- 0.0830 (MedAE: 0.0604)
+[14:49:53]   vs MODNet v0.1.12 Record (0.2711): Delta = +0.0136
+[14:49:53]   vs Prior Best Ensemble (0.2903):   Delta = -0.0056
+[14:49:53]   vs SchNet Leaderboard (0.3277):    Delta = -0.0430
+[14:49:53]   vs ALIGNN Leaderboard (0.3449):    Delta = -0.0602
+[14:49:53] 
+================================================================================
+[14:49:53] GRAND ENSEMBLE EXPLORATION (FRONTIER + ADVANCED GNN GENERATIONS)
+[14:49:53] ================================================================================
+[14:49:54] Evaluating grand blend of 5 diverse models: ['Ensemble_NNLS', 'Ensemble_InvVal', 'Hierarchical_Global_GNN', 'Global_CGNN', 'Log_CGNN']
+[14:49:54]   Fold 0 Grand Blend MAE: 0.1754
+[14:49:54]   Fold 1 Grand Blend MAE: 0.2475
+[14:49:54]   Fold 2 Grand Blend MAE: 0.3982
+[14:49:54]   Fold 3 Grand Blend MAE: 0.2886
+[14:49:54]   Fold 4 Grand Blend MAE: 0.2873
+[14:49:54] 
+GRAND BLEND 5-FOLD MAE: 0.2794 +/- 0.0808
+[14:49:54] Delta vs MODNet (0.2711): +0.0083
+[14:49:54] Delta vs Prior Best (0.2903): -0.0109
+[14:49:54] 
+Final audit report written to d:\Desktop\Material_science_qml\results\frontier_gnn_comparability_audit\frontier_audit_verdict.md
+[14:49:54] ================================================================================
+[14:49:54] AUDIT COMPLETE
+[14:49:54] ================================================================================

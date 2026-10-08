@@ -1,0 +1,14 @@
+{
+  "benchmark": "matbench_v0.1_matbench_dielectric",
+  "n_samples": 4764,
+  "n_models_verified": 12,
+  "grand_ensemble_recomputed_mae": 0.27939692370610103,
+  "grand_ensemble_recomputed_std": 0.08076771560882666,
+  "grand_ensemble_reported_mae": 0.2794,
+  "grand_ensemble_reported_std": 0.0808,
+  "mae_diff": 3.0762938989514765e-06,
+  "std_diff": 3.228439117333726e-05,
+  "pass_criterion": true,
+  "all_reported_models_match": true,
+  "authorized_statement": "The reported five-fold score was independently reconstructed from saved out-of-fold predictions."
+}

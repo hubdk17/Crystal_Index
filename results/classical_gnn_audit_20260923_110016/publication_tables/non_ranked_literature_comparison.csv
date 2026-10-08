@@ -1,0 +1,8 @@
+Model Architecture,Source / Reference,Protocol,Reported Test MAE,Notes
+MODNet v0.1.12,De Breuck et al. (2021),Official MatBench 5-Fold,0.2711,Published Benchmark SOTA
+SchNet (Continuous-Filter),Dunn et al. (2020),Official MatBench 5-Fold,0.3277,GNN Baseline
+MegNet (Message-Passing),Dunn et al. (2020),Official MatBench 5-Fold,0.3391,GNN Baseline
+ALIGNN (Line-Graph GNN),Choudhary et al. (2021),Official MatBench 5-Fold,0.3449,GNN Benchmark
+CGCNN v2019 (Original),Dunn et al. (2020),Official MatBench 5-Fold,0.5988,Historical GNN Baseline
+RBF SVR (Audited Classical Pipeline),This Audit (2026),Official MatBench 5-Fold (Inner Pipeline),0.3124 ± 0.0812,Audited Leakage-Free Pipeline
+CGCNN-style Periodic Crystal GNN,This Audit (2026),Official MatBench 5-Fold (Inner Checkpoint),0.3298 ± 0.0800,Audited Inner-Val Checkpointed

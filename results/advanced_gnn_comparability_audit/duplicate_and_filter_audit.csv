@@ -1,0 +1,9 @@
+Audit_Check,Expected_Value,Observed_Value,Verdict
+Total Benchmark Samples Loaded,4764,4764,PASS
+Duplicate Structure Drops,0,0,PASS
+Missing or Dropped Values in Target n,0,0,PASS
+Graph Precomputation Failures,0,0,PASS
+Target Value Truncation / Outlier Removal,None,Max n = 62.06 retained untouched,PASS
+Unphysical Predictions Generated (n < 1.0),0.0%,0.00% (0 / 23820),PASS
+Inverse Log Transformation Accuracy,Exact (n = 0.99 + exp(z)),Exact analytical inversion verified,PASS
+Total Out-of-Fold Predictions Evaluated,23820 (4764 x 5 models),23820,PASS

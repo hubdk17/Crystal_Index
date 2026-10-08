@@ -1,0 +1,37 @@
+# Python virtual environment
+venv/
+env/
+.venv/
+ENV/
+
+# Python cache and compiled bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE and Editor files
+.vscode/
+.idea/
+
+# Large precomputed tensor cache (> 100 MB GitHub file size limit)
+# Note: This file (~306 MB) is generated automatically on-the-fly by the scripts if absent.
+data/processed/frontier_graphs_cache.pt
+
+# LaTeX temporary build files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz

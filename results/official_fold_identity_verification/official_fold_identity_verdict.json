@@ -1,0 +1,12 @@
+{
+  "benchmark": "matbench_v0.1_matbench_dielectric",
+  "canonical_samples": 4764,
+  "n_audited_evaluations": 65,
+  "zero_mismatched_ids": true,
+  "zero_train_test_overlap": true,
+  "zero_formula_mismatches": true,
+  "zero_structure_hash_mismatches": true,
+  "total_test_appearances": 4764,
+  "all_pass_criteria_met": true,
+  "certified_statement": "All reported results use the exact official MatBench v0.1 outer-fold partition."
+}

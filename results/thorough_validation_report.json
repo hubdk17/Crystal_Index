@@ -1,0 +1,306 @@
+{
+  "audit_timestamp": "2026-09-23T10:38:47.227201",
+  "total_materials": 4764,
+  "fold_evaluated": 0,
+  "data_leakage_audit": {
+    "fold_0": {
+      "n_train": 3811,
+      "n_test": 953,
+      "disjoint_check": true,
+      "overlap_count": 0,
+      "completeness_check": true,
+      "independent_scaling_confirmed": true
+    },
+    "fold_1": {
+      "n_train": 3811,
+      "n_test": 953,
+      "disjoint_check": true,
+      "overlap_count": 0,
+      "completeness_check": true,
+      "independent_scaling_confirmed": true
+    },
+    "fold_2": {
+      "n_train": 3811,
+      "n_test": 953,
+      "disjoint_check": true,
+      "overlap_count": 0,
+      "completeness_check": true,
+      "independent_scaling_confirmed": true
+    },
+    "fold_3": {
+      "n_train": 3811,
+      "n_test": 953,
+      "disjoint_check": true,
+      "overlap_count": 0,
+      "completeness_check": true,
+      "independent_scaling_confirmed": true
+    },
+    "fold_4": {
+      "n_train": 3812,
+      "n_test": 952,
+      "disjoint_check": true,
+      "overlap_count": 0,
+      "completeness_check": true,
+      "independent_scaling_confirmed": true
+    }
+  },
+  "model_performance_comparison": {
+    "Ridge": {
+      "MAE": 0.4567,
+      "MedianAE": 0.2973,
+      "RMSE": 0.8241,
+      "NRMSE": 0.0502,
+      "R2": 0.3933,
+      "Pearson_r": 0.6707,
+      "Spearman_rho": 0.7985,
+      "Mean_Bias": 0.1203,
+      "P95_Error": 1.2439,
+      "Max_Error": 14.2422,
+      "Unphysical_Predictions_Pct": 1.47,
+      "Fit_Time_s": 0.17
+    },
+    "Linear SVR": {
+      "MAE": 0.2755,
+      "MedianAE": 0.1227,
+      "RMSE": 0.7613,
+      "NRMSE": 0.0464,
+      "R2": 0.4824,
+      "Pearson_r": 0.7012,
+      "Spearman_rho": 0.9243,
+      "Mean_Bias": -0.1015,
+      "P95_Error": 0.9399,
+      "Max_Error": 14.6853,
+      "Unphysical_Predictions_Pct": 0.63,
+      "Fit_Time_s": 27.42
+    },
+    "Poly SVR (d=3)": {
+      "MAE": 0.2437,
+      "MedianAE": 0.1091,
+      "RMSE": 0.7122,
+      "NRMSE": 0.0434,
+      "R2": 0.547,
+      "Pearson_r": 0.7434,
+      "Spearman_rho": 0.9301,
+      "Mean_Bias": -0.0721,
+      "P95_Error": 0.7825,
+      "Max_Error": 14.658,
+      "Unphysical_Predictions_Pct": 0.63,
+      "Fit_Time_s": 1.85
+    },
+    "RBF SVR": {
+      "MAE": 0.2163,
+      "MedianAE": 0.1044,
+      "RMSE": 0.6469,
+      "NRMSE": 0.0394,
+      "R2": 0.6262,
+      "Pearson_r": 0.7928,
+      "Spearman_rho": 0.9337,
+      "Mean_Bias": -0.0268,
+      "P95_Error": 0.6751,
+      "Max_Error": 14.2958,
+      "Unphysical_Predictions_Pct": 0.0,
+      "Fit_Time_s": 2.59
+    },
+    "Random Forest": {
+      "MAE": 0.3884,
+      "MedianAE": 0.1309,
+      "RMSE": 1.1093,
+      "NRMSE": 0.0676,
+      "R2": -0.0991,
+      "Pearson_r": 0.5479,
+      "Spearman_rho": 0.8868,
+      "Mean_Bias": 0.1808,
+      "P95_Error": 1.5831,
+      "Max_Error": 14.4636,
+      "Unphysical_Predictions_Pct": 0.0,
+      "Fit_Time_s": 3.49
+    },
+    "CGCNN (Deep GNN)": {
+      "MAE": 0.2211,
+      "MedianAE": 0.0848,
+      "RMSE": 0.688,
+      "NRMSE": 0.0419,
+      "R2": 0.5772,
+      "Pearson_r": 0.7674,
+      "Spearman_rho": 0.9397,
+      "Mean_Bias": -0.1005,
+      "P95_Error": 0.8494,
+      "Max_Error": 14.6451,
+      "Unphysical_Predictions_Pct": 0.0,
+      "Fit_Time_s": 0.01
+    }
+  },
+  "statistical_hypothesis_tests": {
+    "GNN_vs_RBF_SVR": {
+      "Wilcoxon_W": 212393.0,
+      "Wilcoxon_p_value": 0.07964281180282178,
+      "Paired_t_stat": 0.618802848656223,
+      "Paired_t_p_value": 0.5361942798057242,
+      "MAE_Improvement": -0.0048,
+      "95pct_CI": [
+        -0.02,
+        0.0104
+      ],
+      "Statistically_Significant_p05": false,
+      "Statistically_Significant_p001": false
+    }
+  },
+  "top_outliers": [
+    {
+      "rank": 1,
+      "formula": "Ca2SnN2",
+      "nsites": 20,
+      "true_n": 17.407,
+      "predicted_n": 2.762,
+      "abs_error": 14.6451
+    },
+    {
+      "rank": 2,
+      "formula": "Li5Sn2",
+      "nsites": 7,
+      "true_n": 10.5377,
+      "predicted_n": 3.5526,
+      "abs_error": 6.9851
+    },
+    {
+      "rank": 3,
+      "formula": "AgI2",
+      "nsites": 3,
+      "true_n": 7.229,
+      "predicted_n": 2.1429,
+      "abs_error": 5.0861
+    },
+    {
+      "rank": 4,
+      "formula": "GaAs",
+      "nsites": 4,
+      "true_n": 8.3115,
+      "predicted_n": 3.6988,
+      "abs_error": 4.6128
+    },
+    {
+      "rank": 5,
+      "formula": "Sc2P7Ru12",
+      "nsites": 21,
+      "true_n": 1.0,
+      "predicted_n": 4.7659,
+      "abs_error": 3.7659
+    }
+  ],
+  "quantum_spectral_and_kta": {
+    "Classical_RBF": {
+      "KTA": 0.08562,
+      "Effective_Rank": 165.61,
+      "OffDiag_Variance": 0.00204
+    },
+    "Quantum_Fidelity": {
+      "KTA": 0.02383,
+      "Effective_Rank": 29.86,
+      "OffDiag_Variance": 0.01929
+    },
+    "Projected_Quantum": {
+      "KTA": 0.00223,
+      "Effective_Rank": 2.33,
+      "OffDiag_Variance": 0.00168
+    }
+  },
+  "top_physical_features": [
+    {
+      "rank": 1,
+      "feature": "density",
+      "importance_mean": 0.13344,
+      "importance_std": 0.00783
+    },
+    {
+      "rank": 2,
+      "feature": "vpa",
+      "importance_mean": 0.07939,
+      "importance_std": 0.00609
+    },
+    {
+      "rank": 3,
+      "feature": "MagpieData avg_dev Electronegativity",
+      "importance_mean": 0.02598,
+      "importance_std": 0.00346
+    },
+    {
+      "rank": 4,
+      "feature": "MagpieData avg_dev NpValence",
+      "importance_mean": 0.02189,
+      "importance_std": 0.00439
+    },
+    {
+      "rank": 5,
+      "feature": "MagpieData mean CovalentRadius",
+      "importance_mean": 0.02116,
+      "importance_std": 0.00323
+    },
+    {
+      "rank": 6,
+      "feature": "MagpieData maximum NpValence",
+      "importance_mean": 0.01743,
+      "importance_std": 0.00232
+    },
+    {
+      "rank": 7,
+      "feature": "MagpieData avg_dev NdUnfilled",
+      "importance_mean": 0.01589,
+      "importance_std": 0.00312
+    },
+    {
+      "rank": 8,
+      "feature": "MagpieData avg_dev NpUnfilled",
+      "importance_mean": 0.01487,
+      "importance_std": 0.00206
+    },
+    {
+      "rank": 9,
+      "feature": "packing fraction",
+      "importance_mean": 0.01349,
+      "importance_std": 0.00304
+    },
+    {
+      "rank": 10,
+      "feature": "MagpieData mean Row",
+      "importance_mean": 0.01277,
+      "importance_std": 0.00402
+    },
+    {
+      "rank": 11,
+      "feature": "MagpieData mode Electronegativity",
+      "importance_mean": 0.01238,
+      "importance_std": 0.00123
+    },
+    {
+      "rank": 12,
+      "feature": "MagpieData range NpValence",
+      "importance_mean": 0.01193,
+      "importance_std": 0.00191
+    },
+    {
+      "rank": 13,
+      "feature": "MagpieData mean GSmagmom",
+      "importance_mean": 0.00971,
+      "importance_std": 0.00106
+    },
+    {
+      "rank": 14,
+      "feature": "MagpieData maximum Electronegativity",
+      "importance_mean": 0.00955,
+      "importance_std": 0.00232
+    },
+    {
+      "rank": 15,
+      "feature": "MagpieData mean GSvolume_pa",
+      "importance_mean": 0.00925,
+      "importance_std": 0.00197
+    }
+  ],
+  "figures_generated": [
+    "d:\\Desktop\\Material_science_qml\\figures\\validation_residual_diagnostics.png",
+    "d:\\Desktop\\Material_science_qml\\figures\\validation_error_vs_target.png",
+    "d:\\Desktop\\Material_science_qml\\figures\\validation_feature_importance.png",
+    "d:\\Desktop\\Material_science_qml\\figures\\validation_quantum_spectral_analysis.png"
+  ],
+  "audit_duration_seconds": 120.39
+}

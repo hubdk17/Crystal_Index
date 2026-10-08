@@ -1,0 +1,117 @@
+[17:12:40] ================================================================================
+[17:12:40] STARTING FROZEN CHEMISTRY-GROUPED OOD CONFIRMATION BENCHMARK
+[17:12:40] ================================================================================
+[17:12:40] Device: cuda
+[17:12:40] 
+[Step 1] Loading official MatBench dataset and computing chemical systems...
+[17:12:46] Total canonical samples: 4764
+[17:12:46] Unique chemical systems: 3169
+[17:12:46] 
+[Step 2] Partitioning 5-Fold GroupKFold strictly by Chemical System...
+[17:12:46] Pre-saved group assignments to: d:\Desktop\Material_science_qml\results\chemistry_grouped_ood_confirmation\manifests\group_assignments.csv
+[17:12:46] Fold 0 OOD Manifest -> Train: 3811 (Sys: 2538) | Test: 953 (Sys: 631) | Overlap: 0
+[17:12:46] Fold 1 OOD Manifest -> Train: 3811 (Sys: 2535) | Test: 953 (Sys: 634) | Overlap: 0
+[17:12:46] Fold 2 OOD Manifest -> Train: 3811 (Sys: 2534) | Test: 953 (Sys: 635) | Overlap: 0
+[17:12:47] Fold 3 OOD Manifest -> Train: 3811 (Sys: 2534) | Test: 953 (Sys: 635) | Overlap: 0
+[17:12:47] Fold 4 OOD Manifest -> Train: 3812 (Sys: 2535) | Test: 952 (Sys: 634) | Overlap: 0
+[17:12:47] 
+[Step 3] Loading precomputed graph cache...
+[17:12:49] Loaded 4764 graphs from cache.
+[17:12:49] 
+================================================================================
+[17:12:49] [Step 4] EXECUTING FROZEN DualHead_LogDirect_GNN ON 5 OOD FOLDS
+[17:12:49] ================================================================================
+[17:12:49] 
+----------------------------------------------------------------------
+[17:12:49] --- EXECUTING OOD FOLD 0 / 4 (GroupKFold Unseen Chemical Systems) ---
+[17:12:49] ----------------------------------------------------------------------
+[17:12:49]   Outer Train: 3811 -> Inner Train: 3240, Inner Val: 571
+[17:12:49]   Outer Test (Held-Out Unseen Chem Systems): 953
+[17:16:52] ================================================================================
+[17:16:52] STARTING FROZEN CHEMISTRY-GROUPED OOD CONFIRMATION BENCHMARK
+[17:16:52] ================================================================================
+[17:16:52] Execution Device: cpu
+[17:16:52] 
+[Step 1] Loading official MatBench dataset and computing chemical systems...
+[17:16:58] Total canonical samples: 4764
+[17:16:58] Unique chemical systems: 3169
+[17:16:58] 
+[Step 2] Partitioning 5-Fold GroupKFold strictly by Chemical System...
+[17:16:58] Pre-saved group assignments to: d:\Desktop\Material_science_qml\results\chemistry_grouped_ood_confirmation\manifests\group_assignments.csv
+[17:16:58] Fold 0 OOD Manifest -> Train: 3811 (Sys: 2538) | Test: 953 (Sys: 631) | Overlap: 0
+[17:16:58] Fold 1 OOD Manifest -> Train: 3811 (Sys: 2535) | Test: 953 (Sys: 634) | Overlap: 0
+[17:16:58] Fold 2 OOD Manifest -> Train: 3811 (Sys: 2534) | Test: 953 (Sys: 635) | Overlap: 0
+[17:16:58] Fold 3 OOD Manifest -> Train: 3811 (Sys: 2534) | Test: 953 (Sys: 635) | Overlap: 0
+[17:16:58] Fold 4 OOD Manifest -> Train: 3812 (Sys: 2535) | Test: 952 (Sys: 634) | Overlap: 0
+[17:16:58] 
+[Step 3] Loading precomputed graph cache...
+[17:17:01] Loaded 4764 graphs from cache.
+[17:17:01] 
+================================================================================
+[17:17:01] [Step 4] EXECUTING FROZEN DualHead_LogDirect_GNN ON 5 OOD FOLDS
+[17:17:01] ================================================================================
+[17:17:01] 
+----------------------------------------------------------------------
+[17:17:01] --- EXECUTING OOD FOLD 0 / 4 (GroupKFold Unseen Chemical Systems) ---
+[17:17:01] ----------------------------------------------------------------------
+[17:17:01]   Outer Train: 3811 -> Inner Train: 3240, Inner Val: 571
+[17:17:01]   Outer Test (Held-Out Unseen Chem Systems): 953
+[17:18:49]   Training complete in 105.9s | Best Epoch: 22 | Best Inner-Val MAE: 0.2151
+[17:18:49]   OOD Outer Test -> MAE: 0.3006 | MedAE: 0.0666 | RMSE: 1.4871 | R2: 0.2672 | rho: 0.9088
+[17:18:49] 
+----------------------------------------------------------------------
+[17:18:49] --- EXECUTING OOD FOLD 1 / 4 (GroupKFold Unseen Chemical Systems) ---
+[17:18:49] ----------------------------------------------------------------------
+[17:18:49]   Outer Train: 3811 -> Inner Train: 3240, Inner Val: 571
+[17:18:49]   Outer Test (Held-Out Unseen Chem Systems): 953
+[17:20:39]   Training complete in 109.2s | Best Epoch: 20 | Best Inner-Val MAE: 0.1720
+[17:20:39]   OOD Outer Test -> MAE: 0.2855 | MedAE: 0.0710 | RMSE: 1.9284 | R2: 0.1418 | rho: 0.9321
+[17:20:39] 
+----------------------------------------------------------------------
+[17:20:39] --- EXECUTING OOD FOLD 2 / 4 (GroupKFold Unseen Chemical Systems) ---
+[17:20:39] ----------------------------------------------------------------------
+[17:20:39]   Outer Train: 3811 -> Inner Train: 3240, Inner Val: 571
+[17:20:39]   Outer Test (Held-Out Unseen Chem Systems): 953
+[17:22:39]   Training complete in 120.2s | Best Epoch: 22 | Best Inner-Val MAE: 0.3117
+[17:22:40]   OOD Outer Test -> MAE: 0.3097 | MedAE: 0.0649 | RMSE: 2.0642 | R2: 0.1557 | rho: 0.9412
+[17:22:40] 
+----------------------------------------------------------------------
+[17:22:40] --- EXECUTING OOD FOLD 3 / 4 (GroupKFold Unseen Chemical Systems) ---
+[17:22:40] ----------------------------------------------------------------------
+[17:22:40]   Outer Train: 3811 -> Inner Train: 3240, Inner Val: 571
+[17:22:40]   Outer Test (Held-Out Unseen Chem Systems): 953
+[17:24:33]   Training complete in 112.7s | Best Epoch: 17 | Best Inner-Val MAE: 0.2188
+[17:24:33]   OOD Outer Test -> MAE: 0.3266 | MedAE: 0.0713 | RMSE: 1.8664 | R2: 0.2032 | rho: 0.9392
+[17:24:33] 
+----------------------------------------------------------------------
+[17:24:33] --- EXECUTING OOD FOLD 4 / 4 (GroupKFold Unseen Chemical Systems) ---
+[17:24:33] ----------------------------------------------------------------------
+[17:24:33]   Outer Train: 3812 -> Inner Train: 3241, Inner Val: 571
+[17:24:33]   Outer Test (Held-Out Unseen Chem Systems): 952
+[17:26:23]   Training complete in 109.5s | Best Epoch: 21 | Best Inner-Val MAE: 0.3475
+[17:26:23]   OOD Outer Test -> MAE: 0.2643 | MedAE: 0.0722 | RMSE: 2.0802 | R2: 0.1844 | rho: 0.9440
+[17:26:23] 
+All OOD predictions saved to d:\Desktop\Material_science_qml\results\chemistry_grouped_ood_confirmation\predictions\ood_predictions.csv (4764 rows).
+[17:26:23] 
+================================================================================
+[17:26:23] CHEMISTRY-GROUPED OOD CONFIRMATION RESULTS SUMMARY
+[17:26:23] ================================================================================
+[17:26:23] Model: Frozen DualHead_LogDirect_GNN (Single Publication Confirmation Model)
+[17:26:23] Split: 5-Fold GroupKFold by Chemical System (N = 4764)
+[17:26:23] 5-Fold OOD MAE:          0.2973 +/- 0.0237
+[17:26:23] 5-Fold OOD MedAE:        0.0692 +/- 0.0032
+[17:26:23] 5-Fold OOD RMSE:         1.8853
+[17:26:23] 5-Fold OOD R2:           0.1905
+[17:26:23] 5-Fold OOD Spearman rho: 0.9331
+[17:26:23] 
+Comparison vs Standard MatBench Folds:
+[17:26:23]   Standard MatBench MAE: 0.2909
+[17:26:23]   OOD Extrapolation MAE: 0.2973
+[17:26:23]   Degradation:           +0.0064 (+2.22%)
+[17:26:25] Figure saved to: d:\Desktop\Material_science_qml\results\chemistry_grouped_ood_confirmation\figures\ood_generalization_confirmation.png
+[17:26:25] Figure copied to artifact directory: C:\Users\HP\.gemini\antigravity-ide\brain\7e1462b3-34c9-4d76-a8c1-ddab45f77d0b\ood_generalization_confirmation.png
+[17:26:25] 
+================================================================================
+[17:26:25] OOD CONFIRMATION BENCHMARK COMPLETE
+[17:26:25] Safe Interpretation: "The frozen model was evaluated under chemistry-grouped OOD splits to assess extrapolation to unseen chemical systems. This supplementary result is not directly comparable with MatBench leaderboard scores."
+[17:26:25] ================================================================================

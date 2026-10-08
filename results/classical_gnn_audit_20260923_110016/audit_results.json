@@ -1,0 +1,358 @@
+{
+  "audit_timestamp": "20260923_110016",
+  "environment": {
+    "os": "Windows-10-10.0.26200-SP0",
+    "python": "3.11.9",
+    "cpu_count_logical": 16,
+    "pytorch_version": "2.14.0+cu126",
+    "cuda_available": true,
+    "gpu_name": "NVIDIA GeForce RTX 5070 Laptop GPU",
+    "numpy_version": "2.4.6",
+    "pandas_version": "2.3.3",
+    "pymatgen_version": "2026.5.4"
+  },
+  "source_code_hashes": {
+    "01_extract_and_explore_datasets.py": "4aca557fdee6443037d3ad7e90e82403a062f56e673401d49b431d362a98e684",
+    "02_featurize_materials.py": "0b789bec5bb512ec8e10e6353de6c908fd1058c4f5e90c35b820ed3db0d1a24c",
+    "03_dimensionality_reduction.py": "d06714e870fe550fa551715f8c310968b9b42c0da9e55f0186b8f49e80b6559d",
+    "04_classical_baselines.py": "aadfae99cfb4f58f5be3c849b19b18b5ec954dfd6d506f20c372b929fde5aae6",
+    "05_quantum_kernel_benchmark.py": "1ece72f907f40554d861bb66459ac02bfb2f7dd263f464860c1064eaacf474fc",
+    "06_train_crystal_gnn.py": "a6a70f686e33f7d950662043ccee312137e01bb0d34a7d7787b908d5968e9fb3",
+    "07_thorough_validation_analysis.py": "36ffb6a94c3b9a261e803051381d758936ce51691f849a75584f9c0f3b3df43e",
+    "08_adversarial_reproducibility_audit.py": "c890c1901baa1e225805cb641bdc3c8fd6fa6aed02d005a945bb33a76870bdba"
+  },
+  "part_a_dataset_identity": {
+    "status": "PASS",
+    "total_samples": 4764,
+    "target_name": "n",
+    "fold_integrity": {
+      "fold_0": {
+        "disjoint": true,
+        "complete": true
+      },
+      "fold_1": {
+        "disjoint": true,
+        "complete": true
+      },
+      "fold_2": {
+        "disjoint": true,
+        "complete": true
+      },
+      "fold_3": {
+        "disjoint": true,
+        "complete": true
+      },
+      "fold_4": {
+        "disjoint": true,
+        "complete": true
+      }
+    }
+  },
+  "part_b_leakage_audit": {
+    "classical_feature_schema": "d:\\Desktop\\Material_science_qml\\results\\classical_gnn_audit_20260923_110016\\classical_feature_schema.csv",
+    "label_permutation_test": {
+      "dummy_train_mean_mae": 0.7026,
+      "shuffled_rbf_svr_mae": 0.7054,
+      "shuffled_rbf_svr_r2": -0.184,
+      "verdict": "PASS"
+    }
+  },
+  "part_c_claims_audit": [
+    {
+      "claim_id": "CLM-001",
+      "original_claim": "GNN achieves Test MAE = 0.2068 on Fold 0 outperforming published MODNet SOTA (0.2711)",
+      "evidence_file": "src/06_train_crystal_gnn.py",
+      "audit_status": "INVALID_FOR_COMPARISON",
+      "publication_safe_wording": "Historical CGCNN script monitored the outer-test set at every epoch to select the checkpoint (test-monitored early stopping). In publication-grade inner validation, the model must be checkpointed strictly on an inner-validation split."
+    },
+    {
+      "claim_id": "CLM-002",
+      "original_claim": "Classical features generated with zero missing values and zero leakage across 5 folds",
+      "evidence_file": "src/02_featurize_materials.py",
+      "audit_status": "EXPLORATORY_ONLY",
+      "publication_safe_wording": "Global median imputation was applied across all 4,764 materials prior to fold partitioning. In the publication-grade pipeline, imputation must be embedded inside an sklearn Pipeline fit strictly per outer-training fold."
+    },
+    {
+      "claim_id": "CLM-003",
+      "original_claim": "Statistical significance of GNN over RBF SVR (p < 0.001)",
+      "evidence_file": "src/07_thorough_validation_analysis.py",
+      "audit_status": "WITHDRAWN",
+      "publication_safe_wording": "Wilcoxon signed-rank test yields W = 212,393.0, p = 0.0796 (p > 0.05). There is no statistically significant difference in mean absolute error between GNN and RBF SVR on Fold 0."
+    },
+    {
+      "claim_id": "CLM-004",
+      "original_claim": "Physical feature attribution conclusively validates causal Clausius-Mossotti mechanism",
+      "evidence_file": "src/07_thorough_validation_analysis.py",
+      "audit_status": "REVISED_PHYSICALLY_CAUTIOUS",
+      "publication_safe_wording": "Permutation feature importance confirms that density, volume per atom, and valence polarizability are strongly associated with refractive index predictions, which is physically consistent with macroscopic dielectric heuristics, though observational ML feature attribution does not prove microscopic causality."
+    }
+  ],
+  "part_d_5fold_summary": [
+    {
+      "Model Architecture": "CGCNN-style Periodic Crystal GNN",
+      "MAE (Mean \u00b1 SD)": "0.3298 \u00b1 0.0800",
+      "MedAE (Mean \u00b1 SD)": "0.0858 \u00b1 0.0055",
+      "RMSE (Mean \u00b1 SD)": "1.7291 \u00b1 0.9109",
+      "R\u00b2 (Mean \u00b1 SD)": "0.2826 \u00b1 0.2090",
+      "Spearman \u03c1 (Mean \u00b1 SD)": "0.9156 \u00b1 0.0209",
+      "Mean Fit Time (s)": "219.3s"
+    },
+    {
+      "Model Architecture": "Linear SVR",
+      "MAE (Mean \u00b1 SD)": "0.3756 \u00b1 0.0807",
+      "MedAE (Mean \u00b1 SD)": "0.1298 \u00b1 0.0055",
+      "RMSE (Mean \u00b1 SD)": "1.7546 \u00b1 0.8869",
+      "R\u00b2 (Mean \u00b1 SD)": "0.2528 \u00b1 0.1726",
+      "Spearman \u03c1 (Mean \u00b1 SD)": "0.9027 \u00b1 0.0203",
+      "Mean Fit Time (s)": "44.9s"
+    },
+    {
+      "Model Architecture": "Poly SVR (d=3)",
+      "MAE (Mean \u00b1 SD)": "0.3407 \u00b1 0.0779",
+      "MedAE (Mean \u00b1 SD)": "0.1065 \u00b1 0.0031",
+      "RMSE (Mean \u00b1 SD)": "1.7496 \u00b1 0.9131",
+      "R\u00b2 (Mean \u00b1 SD)": "0.2627 \u00b1 0.2174",
+      "Spearman \u03c1 (Mean \u00b1 SD)": "0.9149 \u00b1 0.0159",
+      "Mean Fit Time (s)": "2.8s"
+    },
+    {
+      "Model Architecture": "RBF SVR",
+      "MAE (Mean \u00b1 SD)": "0.3124 \u00b1 0.0812",
+      "MedAE (Mean \u00b1 SD)": "0.0990 \u00b1 0.0034",
+      "RMSE (Mean \u00b1 SD)": "1.6863 \u00b1 0.9332",
+      "R\u00b2 (Mean \u00b1 SD)": "0.3250 \u00b1 0.2328",
+      "Spearman \u03c1 (Mean \u00b1 SD)": "0.9264 \u00b1 0.0144",
+      "Mean Fit Time (s)": "3.6s"
+    },
+    {
+      "Model Architecture": "Random Forest",
+      "MAE (Mean \u00b1 SD)": "0.4331 \u00b1 0.0510",
+      "MedAE (Mean \u00b1 SD)": "0.1219 \u00b1 0.0118",
+      "RMSE (Mean \u00b1 SD)": "1.9065 \u00b1 0.7731",
+      "R\u00b2 (Mean \u00b1 SD)": "0.0481 \u00b1 0.1257",
+      "Spearman \u03c1 (Mean \u00b1 SD)": "0.8890 \u00b1 0.0211",
+      "Mean Fit Time (s)": "3.6s"
+    },
+    {
+      "Model Architecture": "Ridge",
+      "MAE (Mean \u00b1 SD)": "0.5284 \u00b1 0.0575",
+      "MedAE (Mean \u00b1 SD)": "0.2831 \u00b1 0.0282",
+      "RMSE (Mean \u00b1 SD)": "1.7712 \u00b1 0.8602",
+      "R\u00b2 (Mean \u00b1 SD)": "0.2288 \u00b1 0.1466",
+      "Spearman \u03c1 (Mean \u00b1 SD)": "0.8152 \u00b1 0.0187",
+      "Mean Fit Time (s)": "0.2s"
+    },
+    {
+      "Model Architecture": "Train-Mean Predictor",
+      "MAE (Mean \u00b1 SD)": "0.8088 \u00b1 0.0802",
+      "MedAE (Mean \u00b1 SD)": "0.6079 \u00b1 0.0160",
+      "RMSE (Mean \u00b1 SD)": "1.9728 \u00b1 0.8120",
+      "R\u00b2 (Mean \u00b1 SD)": "-0.0042 \u00b1 0.0080",
+      "Spearman \u03c1 (Mean \u00b1 SD)": "nan \u00b1 nan",
+      "Mean Fit Time (s)": "0.0s"
+    }
+  ],
+  "part_e_tail_analysis": {
+    "target_statistics": {
+      "min": 1.0,
+      "Q1": 1.6845733598517,
+      "median": 2.060778372079367,
+      "mean": 2.428314139183747,
+      "Q3": 2.595319567746321,
+      "P90": 3.40625287765041,
+      "P95": 4.353645971238813,
+      "P99": 7.207442520856923,
+      "max": 62.06299756430305
+    },
+    "binned_error_analysis": [
+      {
+        "model": "CGCNN-style Periodic Crystal GNN",
+        "bin": "n <= 2",
+        "count": 2229,
+        "pct_of_dataset": 46.79,
+        "MAE": 0.1103,
+        "MedAE": 0.0536,
+        "RMSE": 0.3735,
+        "Bias": 0.0484
+      },
+      {
+        "model": "CGCNN-style Periodic Crystal GNN",
+        "bin": "2 < n <= 3",
+        "count": 1790,
+        "pct_of_dataset": 37.57,
+        "MAE": 0.1635,
+        "MedAE": 0.1121,
+        "RMSE": 0.2434,
+        "Bias": -0.0237
+      },
+      {
+        "model": "CGCNN-style Periodic Crystal GNN",
+        "bin": "3 < n <= 5",
+        "count": 609,
+        "pct_of_dataset": 12.78,
+        "MAE": 0.46,
+        "MedAE": 0.3009,
+        "RMSE": 0.6547,
+        "Bias": -0.179
+      },
+      {
+        "model": "CGCNN-style Periodic Crystal GNN",
+        "bin": "5 < n <= 7",
+        "count": 84,
+        "pct_of_dataset": 1.76,
+        "MAE": 1.3969,
+        "MedAE": 1.0019,
+        "RMSE": 1.8548,
+        "Bias": -1.2859
+      },
+      {
+        "model": "CGCNN-style Periodic Crystal GNN",
+        "bin": "n > 7",
+        "count": 52,
+        "pct_of_dataset": 1.09,
+        "MAE": 12.2154,
+        "MedAE": 7.2509,
+        "RMSE": 17.7805,
+        "Bias": -12.2154
+      },
+      {
+        "model": "RBF SVR",
+        "bin": "n <= 2",
+        "count": 2229,
+        "pct_of_dataset": 46.79,
+        "MAE": 0.1248,
+        "MedAE": 0.0731,
+        "RMSE": 0.3337,
+        "Bias": 0.0644
+      },
+      {
+        "model": "RBF SVR",
+        "bin": "2 < n <= 3",
+        "count": 1790,
+        "pct_of_dataset": 37.57,
+        "MAE": 0.1602,
+        "MedAE": 0.1148,
+        "RMSE": 0.2295,
+        "Bias": 0.0253
+      },
+      {
+        "model": "RBF SVR",
+        "bin": "3 < n <= 5",
+        "count": 609,
+        "pct_of_dataset": 12.78,
+        "MAE": 0.3676,
+        "MedAE": 0.2305,
+        "RMSE": 0.5508,
+        "Bias": -0.0988
+      },
+      {
+        "model": "RBF SVR",
+        "bin": "5 < n <= 7",
+        "count": 84,
+        "pct_of_dataset": 1.76,
+        "MAE": 1.0815,
+        "MedAE": 0.5985,
+        "RMSE": 1.579,
+        "Bias": -0.9084
+      },
+      {
+        "model": "RBF SVR",
+        "bin": "n > 7",
+        "count": 52,
+        "pct_of_dataset": 1.09,
+        "MAE": 11.7067,
+        "MedAE": 6.7879,
+        "RMSE": 17.6126,
+        "Bias": -11.6544
+      }
+    ]
+  },
+  "part_f_ood_generalization": {
+    "chemical_system_overlap_pct": 39.98,
+    "reduced_formula_overlap_pct": 20.02,
+    "ood_group_chemsys_mean_mae": 0.3301,
+    "ood_group_chemsys_std_mae": 0.0263
+  },
+  "part_g_physical_interpretability": {
+    "density_only_baseline_mae": 0.4756,
+    "density_plus_vpa_baseline_mae": 0.4216
+  },
+  "part_h_gnn_ablations": [
+    {
+      "Ablation Setting": "Standard (R=8.0\u00c5, k=12, L=4, Linear Head)",
+      "Inner Val MAE": 0.5239,
+      "MAE": 0.2739617541315595,
+      "MedAE": 0.1232888276730403,
+      "RMSE": 0.7443244512797242,
+      "R2": 0.5051313874501897,
+      "Pearson_r": 0.7277938329464821,
+      "Spearman_rho": 0.9145867856349352,
+      "Mean_Signed_Error": -0.1191854110137227,
+      "P90_AE": 0.5373097324685913,
+      "P95_AE": 0.9349209403071138,
+      "Max_AE": 14.591126782542004,
+      "Fraction_n_less_1": 0.0
+    },
+    {
+      "Ablation Setting": "Ablation: Cutoff Radius 6.0\u00c5",
+      "Inner Val MAE": 0.5189,
+      "MAE": 0.2628382151128514,
+      "MedAE": 0.1301886827185092,
+      "RMSE": 0.7116658288238024,
+      "R2": 0.547605241978145,
+      "Pearson_r": 0.7402769476133222,
+      "Spearman_rho": 0.9294312641338875,
+      "Mean_Signed_Error": -0.0182327339524477,
+      "P90_AE": 0.4843880251835098,
+      "P95_AE": 0.8809338466083239,
+      "Max_AE": 14.071336133127945,
+      "Fraction_n_less_1": 0.0
+    },
+    {
+      "Ablation Setting": "Ablation: Max Neighbors 8",
+      "Inner Val MAE": 0.5561,
+      "MAE": 0.3000788593471291,
+      "MedAE": 0.1296523422008033,
+      "RMSE": 0.7741121643987319,
+      "R2": 0.464729731338377,
+      "Pearson_r": 0.7137057572552811,
+      "Spearman_rho": 0.910365715497904,
+      "Mean_Signed_Error": -0.1776241823076191,
+      "P90_AE": 0.6222760485294372,
+      "P95_AE": 1.0864970465066472,
+      "Max_AE": 14.432878358011976,
+      "Fraction_n_less_1": 0.0
+    },
+    {
+      "Ablation Setting": "Ablation: Conv Layers 3",
+      "Inner Val MAE": 0.5051,
+      "MAE": 0.2574399907346626,
+      "MedAE": 0.098368636776035,
+      "RMSE": 0.7285236763814873,
+      "R2": 0.5259188600790698,
+      "Pearson_r": 0.7390983327230872,
+      "Spearman_rho": 0.9264477497452952,
+      "Mean_Signed_Error": -0.1141942675409251,
+      "P90_AE": 0.5687293300084971,
+      "P95_AE": 0.9734020542507984,
+      "Max_AE": 14.563807828074232,
+      "Fraction_n_less_1": 0.0
+    },
+    {
+      "Ablation Setting": "Ablation: Physically Constrained Output (1 + Softplus)",
+      "Inner Val MAE": 0.5101,
+      "MAE": 0.2512112537331067,
+      "MedAE": 0.1200513441173933,
+      "RMSE": 0.7084631949676177,
+      "R2": 0.5516678079930601,
+      "Pearson_r": 0.7460826017074306,
+      "Spearman_rho": 0.9287935196755625,
+      "Mean_Signed_Error": -0.0660183839725787,
+      "P90_AE": 0.4899382349179876,
+      "P95_AE": 0.7801756728132592,
+      "Max_AE": 14.33247171128346,
+      "Fraction_n_less_1": 0.0
+    }
+  ],
+  "audit_duration_seconds": 18.22
+}

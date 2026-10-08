@@ -1,0 +1,11 @@
+{
+  "benchmark": "matbench_v0.1_matbench_dielectric",
+  "ensemble_invval_max_diff": 8.607801360582812e-07,
+  "ensemble_gnn_max_diff": 6.022876153366497e-07,
+  "grand_ensemble_5fold_mae": 0.27939692370610103,
+  "grand_ensemble_5fold_std": 0.08076771560882666,
+  "all_samples_within_1e5_tol": true,
+  "weights_strictly_inner_val_only": true,
+  "all_pass_criteria_met": true,
+  "certified_statement": "The ensemble was reconstructed exactly from base-model predictions and fold-specific inner-validation-only weights."
+}

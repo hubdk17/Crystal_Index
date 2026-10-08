@@ -1,0 +1,18 @@
+[12:19:29] ================================================================================
+[12:19:29] ADVANCED CRYSTAL GNN VARIATIONS — LEAKAGE-FREE FIVE-FOLD BENCHMARK
+[12:19:29] ================================================================================
+[12:19:29] Isolated run directory: d:\Desktop\Material_science_qml\results\gnn_variations_benchmark_20260923_121929
+[12:19:29] Device: cpu (16 worker threads)
+[12:19:29] 
+Loading official MatbenchBenchmark('matbench_v0.1', subset=['matbench_dielectric']) ...
+[12:19:32] Loaded 4764 materials from official benchmark.
+[12:19:32] 
+Precomputing crystal graphs with R_cut=6.0 A, k=12, and elemental physics priors ...
+[12:19:52] Precomputed and cached 4764 graphs in 19.96s.
+[12:19:52] 
+############################################################
+[12:19:52] ### EXECUTING OFFICIAL FOLD 0 / 4
+[12:19:52] ############################################################
+[12:19:52] 
+--- Training CGCNN_Baseline (Fold 0) ---
+[12:21:55]   Best Val MAE: 0.4767 at epoch 24 (Fit time: 121.7s)

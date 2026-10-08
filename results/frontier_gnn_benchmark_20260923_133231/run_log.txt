@@ -1,0 +1,161 @@
+[13:32:31] ================================================================================
+[13:32:31] FRONTIER CRYSTAL GNN BENCHMARK & MULTI-PARADIGM LOSS EXPLORATION
+[13:32:31] TARGET: CHALLENGE THE BENCHMARK RECORD (MODNet: 0.2711 MAE)
+[13:32:31] ================================================================================
+[13:32:31] Isolated run directory: d:\Desktop\Material_science_qml\results\frontier_gnn_benchmark_20260923_133231
+[13:32:31] Device: cpu (16 worker threads)
+[13:32:31] 
+Loading official MatbenchBenchmark('matbench_v0.1', subset=['matbench_dielectric']) ...
+[13:32:39] Loaded 4764 materials from official benchmark.
+[13:32:39] 
+Precomputing frontier crystal graphs with Chebyshev angles and 12-dim macroscopic physics ...
+[13:38:37] Precomputed 4764 frontier graphs in 357.79s. Saving to cache ...
+[13:38:46] Saved graph cache.
+[13:38:46] 
+############################################################
+[13:38:46] ### EXECUTING OFFICIAL FOLD 0 / 4
+[13:38:46] ############################################################
+[13:38:46] 
+--- Training Angle_Aware_CGNN (Fold 0) ---
+[13:41:53]   Best Val MAE: 0.4145 at epoch 17 (Fit time: 184.3s)
+[13:41:54]   Outer Test -> MAE: 0.1896 | MedAE: 0.0700 | RMSE: 0.6567 | R2: 0.6147 | rho: 0.9539
+[13:41:54] 
+--- Training MultiHead_GraphTransformer (Fold 0) ---
+[13:45:00]   Best Val MAE: 0.4796 at epoch 19 (Fit time: 186.4s)
+[13:45:01]   Outer Test -> MAE: 0.2402 | MedAE: 0.1109 | RMSE: 0.6783 | R2: 0.5890 | rho: 0.9386
+[13:45:01] 
+--- Training Hierarchical_Global_GNN (Fold 0) ---
+[13:48:46]   Best Val MAE: 0.4057 at epoch 23 (Fit time: 224.7s)
+[13:48:46]   Outer Test -> MAE: 0.1874 | MedAE: 0.0720 | RMSE: 0.6638 | R2: 0.6065 | rho: 0.9584
+[13:48:46] 
+--- Training DualHead_LogDirect_GNN (Fold 0) ---
+[13:52:35]   Best Val MAE: 0.4088 at epoch 25 (Fit time: 228.5s)
+[13:52:35]   Outer Test -> MAE: 0.1763 | MedAE: 0.0644 | RMSE: 0.6399 | R2: 0.6342 | rho: 0.9608
+[13:52:35] 
+--- Meta-Ensembling (Fold 0) ---
+[13:52:35]   Ensemble_InvVal -> MAE: 0.1768 | MedAE: 0.0645 | RMSE: 0.6431 | R2: 0.6306
+[13:52:35]   Ensemble_Softmax -> MAE: 0.1746 | MedAE: 0.0635 | RMSE: 0.6438 | R2: 0.6298
+[13:52:35]   Ensemble_NNLS -> MAE: 0.1792 | MedAE: 0.0639 | RMSE: 0.6477 | R2: 0.6252
+[13:52:35] 
+############################################################
+[13:52:35] ### EXECUTING OFFICIAL FOLD 1 / 4
+[13:52:35] ############################################################
+[13:52:36] 
+--- Training Angle_Aware_CGNN (Fold 1) ---
+[13:55:41]   Best Val MAE: 0.2114 at epoch 25 (Fit time: 185.0s)
+[13:55:41]   Outer Test -> MAE: 0.2573 | MedAE: 0.0662 | RMSE: 1.0480 | R2: 0.4684 | rho: 0.9340
+[13:55:41] 
+--- Training MultiHead_GraphTransformer (Fold 1) ---
+[13:58:51]   Best Val MAE: 0.2666 at epoch 12 (Fit time: 189.6s)
+[13:58:51]   Outer Test -> MAE: 0.3280 | MedAE: 0.1174 | RMSE: 1.0825 | R2: 0.4327 | rho: 0.9028
+[13:58:51] 
+--- Training Hierarchical_Global_GNN (Fold 1) ---
+[14:02:25]   Best Val MAE: 0.2164 at epoch 22 (Fit time: 213.4s)
+[14:02:25]   Outer Test -> MAE: 0.2645 | MedAE: 0.0647 | RMSE: 1.0736 | R2: 0.4420 | rho: 0.9267
+[14:02:25] 
+--- Training DualHead_LogDirect_GNN (Fold 1) ---
+[14:06:05]   Best Val MAE: 0.2007 at epoch 25 (Fit time: 219.0s)
+[14:06:05]   Outer Test -> MAE: 0.2557 | MedAE: 0.0659 | RMSE: 1.0417 | R2: 0.4747 | rho: 0.9355
+[14:06:05] 
+--- Meta-Ensembling (Fold 1) ---
+[14:06:05]   Ensemble_InvVal -> MAE: 0.2516 | MedAE: 0.0641 | RMSE: 1.0442 | R2: 0.4722
+[14:06:05]   Ensemble_Softmax -> MAE: 0.2495 | MedAE: 0.0631 | RMSE: 1.0430 | R2: 0.4734
+[14:06:05]   Ensemble_NNLS -> MAE: 0.2518 | MedAE: 0.0622 | RMSE: 1.0471 | R2: 0.4692
+[14:06:05] 
+############################################################
+[14:06:05] ### EXECUTING OFFICIAL FOLD 2 / 4
+[14:06:05] ############################################################
+[14:06:05] 
+--- Training Angle_Aware_CGNN (Fold 2) ---
+[14:09:07]   Best Val MAE: 0.3127 at epoch 16 (Fit time: 181.8s)
+[14:09:08]   Outer Test -> MAE: 0.4185 | MedAE: 0.0639 | RMSE: 2.9418 | R2: 0.1005 | rho: 0.9155
+[14:09:08] 
+--- Training MultiHead_GraphTransformer (Fold 2) ---
+[14:12:31]   Best Val MAE: 0.3810 at epoch 12 (Fit time: 202.7s)
+[14:12:31]   Outer Test -> MAE: 0.4764 | MedAE: 0.1021 | RMSE: 2.9436 | R2: 0.0993 | rho: 0.8924
+[14:12:31] 
+--- Training Hierarchical_Global_GNN (Fold 2) ---
+[14:16:13]   Best Val MAE: 0.3035 at epoch 21 (Fit time: 222.0s)
+[14:16:14]   Outer Test -> MAE: 0.4099 | MedAE: 0.0631 | RMSE: 2.9440 | R2: 0.0991 | rho: 0.9206
+[14:16:14] 
+--- Training DualHead_LogDirect_GNN (Fold 2) ---
+[14:20:05]   Best Val MAE: 0.3016 at epoch 15 (Fit time: 231.0s)
+[14:20:06]   Outer Test -> MAE: 0.4125 | MedAE: 0.0623 | RMSE: 2.9481 | R2: 0.0966 | rho: 0.9197
+[14:20:06] 
+--- Meta-Ensembling (Fold 2) ---
+[14:20:06]   Ensemble_InvVal -> MAE: 0.4055 | MedAE: 0.0560 | RMSE: 2.9406 | R2: 0.1012
+[14:20:06]   Ensemble_Softmax -> MAE: 0.4028 | MedAE: 0.0547 | RMSE: 2.9413 | R2: 0.1008
+[14:20:06]   Ensemble_NNLS -> MAE: 0.4125 | MedAE: 0.0623 | RMSE: 2.9481 | R2: 0.0966
+[14:20:06] 
+############################################################
+[14:20:06] ### EXECUTING OFFICIAL FOLD 3 / 4
+[14:20:06] ############################################################
+[14:20:06] 
+--- Training Angle_Aware_CGNN (Fold 3) ---
+[14:23:06]   Best Val MAE: 0.2864 at epoch 20 (Fit time: 180.0s)
+[14:23:06]   Outer Test -> MAE: 0.3176 | MedAE: 0.0613 | RMSE: 2.3337 | R2: 0.0881 | rho: 0.9296
+[14:23:06] 
+--- Training MultiHead_GraphTransformer (Fold 3) ---
+[14:26:30]   Best Val MAE: 0.3333 at epoch 6 (Fit time: 204.0s)
+[14:26:31]   Outer Test -> MAE: 0.3769 | MedAE: 0.1208 | RMSE: 2.2855 | R2: 0.1253 | rho: 0.9178
+[14:26:31] 
+--- Training Hierarchical_Global_GNN (Fold 3) ---
+[14:30:34]   Best Val MAE: 0.2662 at epoch 24 (Fit time: 242.7s)
+[14:30:34]   Outer Test -> MAE: 0.3039 | MedAE: 0.0604 | RMSE: 2.3030 | R2: 0.1119 | rho: 0.9469
+[14:30:34] 
+--- Training DualHead_LogDirect_GNN (Fold 3) ---
+[14:34:29]   Best Val MAE: 0.2822 at epoch 21 (Fit time: 234.9s)
+[14:34:30]   Outer Test -> MAE: 0.3022 | MedAE: 0.0597 | RMSE: 2.2811 | R2: 0.1287 | rho: 0.9592
+[14:34:30] 
+--- Meta-Ensembling (Fold 3) ---
+[14:34:30]   Ensemble_InvVal -> MAE: 0.2968 | MedAE: 0.0581 | RMSE: 2.2930 | R2: 0.1196
+[14:34:30]   Ensemble_Softmax -> MAE: 0.2945 | MedAE: 0.0543 | RMSE: 2.2946 | R2: 0.1184
+[14:34:30]   Ensemble_NNLS -> MAE: 0.3074 | MedAE: 0.0734 | RMSE: 2.2892 | R2: 0.1225
+[14:34:30] 
+############################################################
+[14:34:30] ### EXECUTING OFFICIAL FOLD 4 / 4
+[14:34:30] ############################################################
+[14:34:30] 
+--- Training Angle_Aware_CGNN (Fold 4) ---
+[14:37:47]   Best Val MAE: 0.2676 at epoch 21 (Fit time: 196.4s)
+[14:37:47]   Outer Test -> MAE: 0.3192 | MedAE: 0.0718 | RMSE: 1.6419 | R2: 0.1765 | rho: 0.9114
+[14:37:47] 
+--- Training MultiHead_GraphTransformer (Fold 4) ---
+[14:41:25]   Best Val MAE: 0.3352 at epoch 24 (Fit time: 217.8s)
+[14:41:26]   Outer Test -> MAE: 0.3787 | MedAE: 0.1098 | RMSE: 1.6647 | R2: 0.1535 | rho: 0.8881
+[14:41:26] 
+--- Training Hierarchical_Global_GNN (Fold 4) ---
+[14:45:16]   Best Val MAE: 0.2615 at epoch 23 (Fit time: 230.4s)
+[14:45:17]   Outer Test -> MAE: 0.2928 | MedAE: 0.0631 | RMSE: 1.6074 | R2: 0.2108 | rho: 0.9209
+[14:45:17] 
+--- Training DualHead_LogDirect_GNN (Fold 4) ---
+[14:49:07]   Best Val MAE: 0.2599 at epoch 21 (Fit time: 229.6s)
+[14:49:07]   Outer Test -> MAE: 0.3078 | MedAE: 0.0629 | RMSE: 1.6221 | R2: 0.1962 | rho: 0.9225
+[14:49:07] 
+--- Meta-Ensembling (Fold 4) ---
+[14:49:07]   Ensemble_InvVal -> MAE: 0.2930 | MedAE: 0.0594 | RMSE: 1.6187 | R2: 0.1996
+[14:49:07]   Ensemble_Softmax -> MAE: 0.2910 | MedAE: 0.0575 | RMSE: 1.6174 | R2: 0.2009
+[14:49:07]   Ensemble_NNLS -> MAE: 0.2987 | MedAE: 0.0624 | RMSE: 1.6260 | R2: 0.1923
+[14:49:08] 
+Saved raw fold metrics to d:\Desktop\Material_science_qml\results\frontier_gnn_benchmark_20260923_133231\tables\frontier_gnns_all_folds.csv
+[14:49:08] Saved 28584 prediction rows to d:\Desktop\Material_science_qml\results\frontier_gnn_benchmark_20260923_133231\predictions\frontier_gnns_all_predictions.csv
+[14:49:08] 
+================================================================================
+[14:49:08] FIVE-FOLD CROSS-VALIDATION SUMMARY (MEAN +/- STD)
+[14:49:08] ================================================================================
+[14:49:08] Angle_Aware_CGNN           | MAE: 0.3004 +/- 0.0848 | MedAE: 0.0666 +/- 0.0043 | RMSE: 1.7244 | R2: 0.2896 | rho: 0.9289
+[14:49:08] MultiHead_GraphTransformer | MAE: 0.3600 +/- 0.0860 | MedAE: 0.1122 +/- 0.0073 | RMSE: 1.7309 | R2: 0.2800 | rho: 0.9079
+[14:49:08] Hierarchical_Global_GNN    | MAE: 0.2917 +/- 0.0802 | MedAE: 0.0647 +/- 0.0044 | RMSE: 1.7183 | R2: 0.2941 | rho: 0.9347
+[14:49:08] DualHead_LogDirect_GNN     | MAE: 0.2909 +/- 0.0860 | MedAE: 0.0631 +/- 0.0023 | RMSE: 1.7066 | R2: 0.3061 | rho: 0.9395
+[14:49:08] Ensemble_InvVal            | MAE: 0.2847 +/- 0.0830 | MedAE: 0.0604 +/- 0.0037 | RMSE: 1.7079 | R2: 0.3047 | rho: 0.9401
+[14:49:08] Ensemble_Softmax           | MAE: 0.2825 +/- 0.0828 | MedAE: 0.0586 +/- 0.0045 | RMSE: 1.7080 | R2: 0.3046 | rho: 0.9406
+[14:49:08] Ensemble_NNLS              | MAE: 0.2899 +/- 0.0853 | MedAE: 0.0649 +/- 0.0048 | RMSE: 1.7116 | R2: 0.3012 | rho: 0.9389
+[14:49:08] Saved summary metrics to d:\Desktop\Material_science_qml\results\frontier_gnn_benchmark_20260923_133231\tables\frontier_gnns_summary.csv
+[14:49:08] 
+Generating publication figures ...
+[14:49:13]   Figure 1 saved to d:\Desktop\Material_science_qml\results\frontier_gnn_benchmark_20260923_133231\figures\frontier_oof_parity_plots.png
+[14:49:14]   Figure 2 saved to d:\Desktop\Material_science_qml\results\frontier_gnn_benchmark_20260923_133231\figures\frontier_leaderboard_comparison.png
+[14:49:14] 
+================================================================================
+[14:49:14] FRONTIER GNN BENCHMARK EXECUTION COMPLETE
+[14:49:14] ================================================================================

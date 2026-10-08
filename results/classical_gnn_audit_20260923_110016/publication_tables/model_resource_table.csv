@@ -1,0 +1,8 @@
+Model Architecture,Model Complexity,5-Fold Training Time (s),Inference Time / 1k samples (s),Hardware Used,Deterministic
+Train-Mean Predictor,1 Scalar (Mean),0.00s,< 0.001s,16-core CPU,Yes
+Ridge Regression,154 Coefficients,1.11s,0.002s,16-core CPU,Yes
+Linear SVR,"~2,400 Support Vectors",224.56s,0.015s,16-core CPU,Yes
+Poly SVR (d=3),"~2,300 Support Vectors",13.90s,0.025s,16-core CPU,Yes
+RBF SVR,"~2,100 Support Vectors",18.23s,0.030s,16-core CPU,Yes
+Random Forest Regressor,100 Trees (max_depth=12),18.02s,0.045s,16-core CPU,Yes
+CGCNN-style Periodic Crystal GNN,"98,497 Trainable Parameters",1096.70s,1.250s,16-core CPU (AVX2/AVX-512),Yes (torch.use_deterministic_algorithms)

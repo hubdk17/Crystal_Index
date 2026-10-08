@@ -1,0 +1,6 @@
+model,total_rows,unique_identifiers,min_predictions_per_material,max_predictions_per_material,fold_0_count,fold_1_count,fold_2_count,fold_3_count,fold_4_count,all_materials_covered_exactly_once,coverage_verdict
+CGCNN_Baseline,4764,4764,1,1,953,953,953,953,952,True,PASS
+PE_Attn_CGNN,4764,4764,1,1,953,953,953,953,952,True,PASS
+Global_CGNN,4764,4764,1,1,953,953,953,953,952,True,PASS
+Log_CGNN,4764,4764,1,1,953,953,953,953,952,True,PASS
+Ensemble_GNN,4764,4764,1,1,953,953,953,953,952,True,PASS

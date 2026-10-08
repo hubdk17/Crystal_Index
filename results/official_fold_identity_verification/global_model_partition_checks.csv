@@ -1,0 +1,12 @@
+source,model,total_test_appearances,unique_materials,duplicate_appearances,fold_counts_exact_match,union_matches_canonical_4764,status
+Frontier,Angle_Aware_CGNN,4764,4764,0,True,True,PASS
+Frontier,MultiHead_GraphTransformer,4764,4764,0,True,True,PASS
+Frontier,Hierarchical_Global_GNN,4764,4764,0,True,True,PASS
+Frontier,DualHead_LogDirect_GNN,4764,4764,0,True,True,PASS
+Frontier,Ensemble_NNLS,4764,4764,0,True,True,PASS
+Frontier,Ensemble_InvVal,4764,4764,0,True,True,PASS
+Advanced,CGCNN_Baseline,4764,4764,0,True,True,PASS
+Advanced,PE_Attn_CGNN,4764,4764,0,True,True,PASS
+Advanced,Global_CGNN,4764,4764,0,True,True,PASS
+Advanced,Log_CGNN,4764,4764,0,True,True,PASS
+Advanced,Ensemble_GNN,4764,4764,0,True,True,PASS

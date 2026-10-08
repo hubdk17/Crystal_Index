@@ -1,0 +1,88 @@
+# FROZEN REPRODUCIBILITY CONFIGURATION
+# Advanced Crystal Graph Neural Network Variations Benchmark
+# Task: matbench_dielectric (N = 4,764, target = n)
+
+dataset:
+  name: matbench_dielectric
+  version: matbench_v0.1
+  total_samples: 4764
+  target: n
+  unit: unitless
+  folds: [0, 1, 2, 3, 4]
+
+training_protocol:
+  seed_policy: "42 + fold_idx"
+  outer_folds: 5
+  inner_validation_split: 0.15
+  inner_train_split: 0.85
+  inner_val_seed: "42 + fold_idx"
+  checkpoint_selection: "minimum inner-validation MAE in true n space"
+  outer_test_evaluation: "strictly single pass after loading frozen checkpoint"
+  batch_size: 64
+  epochs: 25
+  optimizer: AdamW
+  weight_decay: 1.0e-4
+  lr_scheduler: CosineAnnealingLR
+  eta_min: 1.0e-5
+
+architectures:
+  CGCNN_Baseline:
+    cutoff_radius_A: 8.0
+    num_rbf_bins: 41
+    max_neighbors: 12
+    atom_embedding_dim: 64
+    conv_layers: 4
+    hidden_dim: 64
+    output_head: linear
+    loss: L1Loss
+    initial_lr: 2.0e-3
+
+  PE_Attn_CGNN:
+    cutoff_radius_A: 6.0
+    num_rbf_bins: 41
+    inverse_distance_dim: 1
+    total_edge_dim: 42
+    max_neighbors: 12
+    atom_embedding_dim: 48
+    elemental_priors_dim: 8
+    node_hidden_dim: 64
+    conv_layers: 3
+    attention_heads: 1
+    pooling: "concat_mean_max"
+    output_head: "1.0 + Softplus"
+    loss: SmoothL1Loss
+    beta: 0.2
+    initial_lr: 1.5e-3
+
+  Global_CGNN:
+    cutoff_radius_A: 6.0
+    num_rbf_bins: 41
+    total_edge_dim: 42
+    max_neighbors: 12
+    atom_embedding_dim: 48
+    elemental_priors_dim: 8
+    macroscopic_global_dim: 4
+    global_features: ["density", "vpa", "packing_fraction", "num_elements"]
+    global_scaler: "StandardScaler fit strictly on inner-train fold"
+    hidden_dim: 64
+    conv_layers: 3
+    message_passing: "tri-directional (node <-> edge <-> global state)"
+    output_head: "1.0 + Softplus"
+    loss: SmoothL1Loss
+    beta: 0.2
+    initial_lr: 1.5e-3
+
+  Log_CGNN:
+    cutoff_radius_A: 6.0
+    total_edge_dim: 42
+    max_neighbors: 12
+    target_transformation: "z = log(n - 0.99)"
+    loss_space: "z-space SmoothL1Loss (beta = 0.15)"
+    inference_readout: "n = 0.99 + exp(z)"
+    output_lower_bound: 0.99
+    initial_lr: 1.5e-3
+
+  Ensemble_GNN:
+    members: ["PE_Attn_CGNN", "Global_CGNN", "Log_CGNN"]
+    weighting_rule: "inverse inner-validation MAE normalized to sum to 1"
+    evaluation: "linear combination of out-of-fold predictions"

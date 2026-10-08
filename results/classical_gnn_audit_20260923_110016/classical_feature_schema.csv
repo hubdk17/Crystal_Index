@@ -1,0 +1,154 @@
+feature_name,source_featurizer,direct_leakage_detected,dft_structure_derived_shortcut
+MagpieData minimum Number,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum Number,ElementProperty.from_preset('magpie'),False,False
+MagpieData range Number,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean Number,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev Number,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode Number,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum MendeleevNumber,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum MendeleevNumber,ElementProperty.from_preset('magpie'),False,False
+MagpieData range MendeleevNumber,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean MendeleevNumber,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev MendeleevNumber,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode MendeleevNumber,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum AtomicWeight,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum AtomicWeight,ElementProperty.from_preset('magpie'),False,False
+MagpieData range AtomicWeight,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean AtomicWeight,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev AtomicWeight,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode AtomicWeight,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum MeltingT,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum MeltingT,ElementProperty.from_preset('magpie'),False,False
+MagpieData range MeltingT,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean MeltingT,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev MeltingT,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode MeltingT,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum Column,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum Column,ElementProperty.from_preset('magpie'),False,False
+MagpieData range Column,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean Column,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev Column,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode Column,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum Row,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum Row,ElementProperty.from_preset('magpie'),False,False
+MagpieData range Row,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean Row,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev Row,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode Row,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum CovalentRadius,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum CovalentRadius,ElementProperty.from_preset('magpie'),False,False
+MagpieData range CovalentRadius,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean CovalentRadius,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev CovalentRadius,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode CovalentRadius,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum Electronegativity,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum Electronegativity,ElementProperty.from_preset('magpie'),False,False
+MagpieData range Electronegativity,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean Electronegativity,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev Electronegativity,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode Electronegativity,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NsValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NsValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NsValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NsValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NsValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NsValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NpValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NpValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NpValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NpValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NpValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NpValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NdValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NdValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NdValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NdValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NdValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NdValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NfValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NfValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NfValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NfValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NfValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NfValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NValence,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NsUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NsUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NsUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NsUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NsUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NsUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NpUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NpUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NpUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NpUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NpUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NpUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NdUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NdUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NdUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NdUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NdUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NdUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NfUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NfUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NfUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NfUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NfUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NfUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum NUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum NUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData range NUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean NUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev NUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode NUnfilled,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum GSvolume_pa,ElementProperty.from_preset('magpie'),False,True
+MagpieData maximum GSvolume_pa,ElementProperty.from_preset('magpie'),False,True
+MagpieData range GSvolume_pa,ElementProperty.from_preset('magpie'),False,True
+MagpieData mean GSvolume_pa,ElementProperty.from_preset('magpie'),False,True
+MagpieData avg_dev GSvolume_pa,ElementProperty.from_preset('magpie'),False,True
+MagpieData mode GSvolume_pa,ElementProperty.from_preset('magpie'),False,True
+MagpieData minimum GSbandgap,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum GSbandgap,ElementProperty.from_preset('magpie'),False,False
+MagpieData range GSbandgap,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean GSbandgap,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev GSbandgap,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode GSbandgap,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum GSmagmom,ElementProperty.from_preset('magpie'),False,False
+MagpieData maximum GSmagmom,ElementProperty.from_preset('magpie'),False,False
+MagpieData range GSmagmom,ElementProperty.from_preset('magpie'),False,False
+MagpieData mean GSmagmom,ElementProperty.from_preset('magpie'),False,False
+MagpieData avg_dev GSmagmom,ElementProperty.from_preset('magpie'),False,False
+MagpieData mode GSmagmom,ElementProperty.from_preset('magpie'),False,False
+MagpieData minimum SpaceGroupNumber,ElementProperty.from_preset('magpie'),False,True
+MagpieData maximum SpaceGroupNumber,ElementProperty.from_preset('magpie'),False,True
+MagpieData range SpaceGroupNumber,ElementProperty.from_preset('magpie'),False,True
+MagpieData mean SpaceGroupNumber,ElementProperty.from_preset('magpie'),False,True
+MagpieData avg_dev SpaceGroupNumber,ElementProperty.from_preset('magpie'),False,True
+MagpieData mode SpaceGroupNumber,ElementProperty.from_preset('magpie'),False,True
+0-norm,Unknown,False,False
+2-norm,Unknown,False,False
+3-norm,Unknown,False,False
+5-norm,Unknown,False,False
+7-norm,Unknown,False,False
+10-norm,Unknown,False,False
+avg s valence electrons,Unknown,False,False
+avg p valence electrons,Unknown,False,False
+avg d valence electrons,Unknown,False,False
+avg f valence electrons,Unknown,False,False
+frac s valence electrons,Unknown,False,False
+frac p valence electrons,Unknown,False,False
+frac d valence electrons,Unknown,False,False
+frac f valence electrons,Unknown,False,False
+spacegroup_num,GlobalSymmetryFeatures(),False,True
+crystal_system_int,GlobalSymmetryFeatures(),False,False
+is_centrosymmetric,GlobalSymmetryFeatures(),False,False
+n_symmetry_ops,Unknown,False,False
+density,DensityFeatures(),False,True
+vpa,DensityFeatures(),False,True
+packing fraction,DensityFeatures(),False,True

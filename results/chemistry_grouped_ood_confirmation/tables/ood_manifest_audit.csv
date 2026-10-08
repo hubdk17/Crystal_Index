@@ -1,0 +1,6 @@
+fold,train_samples,test_samples,train_systems,test_systems,chemical_system_overlap,overlap_status
+0,3811,953,2538,631,0,ZERO_OVERLAP_PASS
+1,3811,953,2535,634,0,ZERO_OVERLAP_PASS
+2,3811,953,2534,635,0,ZERO_OVERLAP_PASS
+3,3811,953,2534,635,0,ZERO_OVERLAP_PASS
+4,3812,952,2535,634,0,ZERO_OVERLAP_PASS
