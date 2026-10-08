@@ -55,10 +55,50 @@ To address these issues, this study presents a rigorous reproducibility audit an
 
 \section{Materials and Methods}
 
-\subsection{Benchmark Dataset and Target Characteristics}
-We evaluate all models on the official MatBench v0.1 \texttt{matbench\_dielectric} benchmark \cite{dunn2020benchmarking}. The dataset comprises $N = 4{,}764$ inorganic crystalline structures computed with density functional perturbation theory within the Materials Project \cite{jain2013commentary, petousis2017high}. 
+\subsection{Benchmark Dataset Structure, Schema, and Target Characteristics}
+We evaluate all models on the official MatBench v0.1 \texttt{matbench\_dielectric} benchmark \cite{dunn2020benchmarking}. The dataset comprises $N = 4{,}764$ inorganic crystalline structures computed with density functional perturbation theory (DFPT) within the Materials Project repository \cite{jain2013commentary, petousis2017high}.
 
-The target is the unitless scalar refractive-index value supplied by the MatBench dielectric task and derived from Materials Project dielectric calculations \cite{dunn2020benchmarking, petousis2017high}. It is a scalar benchmark representation of optical response; it does not resolve dielectric-tensor anisotropy, principal refractive indices, wavelength-dependent dispersion, or optical absorption. The target distribution is heavily right-skewed: the median refractive index is $2.071$, the mean is $2.428$, 95\% of samples lie below $n = 4.35$, while extreme entries extend up to $n = 62.06$.
+\noindent\textit{Dataset Entities and Tabular Schema}: Each row in the benchmark represents an individual, fully relaxed three-dimensional crystalline material. The dataset provides structured crystallographic, compositional, and electronic response fields, as summarized in Table~\ref{tab:dataset_schema}:
+\begin{enumerate}
+    \item \textbf{Sample Identifiers and Formulae}: Each material is indexed by a unique alphanumeric key (\texttt{matbench\_id}, spanning \texttt{mb-dielectric-0001} to \texttt{mb-dielectric-4764}) along with its full stoichiometric formula and reduced chemical formula (e.g., $\text{Li}_2\text{V}(\text{PO}_4)_2$, $\text{BaTiO}_3$).
+    \item \textbf{Chemical System Distribution}: The benchmark spans $3{,}169$ unique elemental chemical systems (defined by unordered sets of constituent elements, such as \texttt{Ba-O-Ti}). The composition space encompasses 30 unary materials (0.6\%), 944 binary systems (19.8\%), 2,671 ternary systems (56.1\%), 894 quaternary systems (18.8\%), 213 quinary systems (4.5\%), and 12 senary systems (0.3\%), providing broad chemical diversity across the periodic table.
+    \item \textbf{Crystal Structure Representation}: The primary geometric input is a periodic unit cell encoded as a \texttt{pymatgen.core.Structure} object \cite{ong2013python}. This object explicitly defines:
+    \begin{itemize}
+        \item The $3 \times 3$ real-space lattice vector matrix $[\mathbf{a}, \mathbf{b}, \mathbf{c}]$, lattice constants ($a, b, c$), and unit-cell angles ($\alpha, \beta, \gamma$).
+        \item Fractional coordinates $(x_i, y_i, z_i)$ for all atomic sites $i \in \{1, \dots, N_{\mathrm{sites}}\}$. Unit-cell site counts range from $1$ to $288$ atoms per cell (median: $12$, mean: $16.9$).
+        \item Atomic identities and nuclear charges $Z_i \in \{1, \dots, 100\}$ populating each crystallographic site.
+        \item Macroscopic cell properties: unit-cell volume $V_{\mathrm{cell}}$ spanning $11.4$ to $3{,}998.5$~\AA$^3$ (median: $214.4$~\AA$^3$) and mass density $\rho_{\mathrm{mass}}$ spanning $0.024$ to $16.002$~$\text{g/cm}^3$ (median: $3.849$~$\text{g/cm}^3$).
+    \end{itemize}
+    \item \textbf{Crystallographic Symmetry Categories}: Structures cover all 230 international space groups and the seven fundamental crystal systems: cubic, hexagonal, trigonal, tetragonal, orthorhombic, monoclinic, and triclinic.
+    \item \textbf{Target Regression Property ($n$)}: The target variable is the unitless scalar refractive index $n$, derived from the orientationally averaged high-frequency electronic dielectric tensor $\boldsymbol{\epsilon}_{\infty}$ computed by DFPT under clamped-ion conditions:
+    \begin{equation}
+        n = \sqrt{\bar{\epsilon}_{\infty}} = \sqrt{\frac{1}{3}\operatorname{Tr}(\boldsymbol{\epsilon}_{\infty})}.
+    \end{equation}
+    The target is strictly bounded below by vacuum ($n \ge 1.0$), with an empirical range of $1.000$ to $62.063$. The distribution is heavily right-skewed: the median refractive index is $2.061$, the mean is $2.428$, 95\% of entries lie below $n = 4.354$, while a sparse tail of highly polarizable, narrow-bandgap materials extends above $n = 8.0$.
+\end{enumerate}
+
+\begin{table*}[htbp]
+\centering
+\caption{Schema, field categories, and physical attributes comprising the MatBench \texttt{matbench\_dielectric} benchmark dataset ($N = 4{,}764$).}
+\label{tab:dataset_schema}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llll}
+\toprule
+\textbf{Field / Attribute} & \textbf{Data Type / Format} & \textbf{Physical Description / Range} & \textbf{Role in Pipeline} \\
+\midrule
+\texttt{matbench\_id} & Alphanumeric String & Unique benchmark index (\texttt{mb-dielectric-0001} to \texttt{mb-dielectric-4764}) & Sample tracking \& cryptographic manifests \\
+\texttt{structure} & \texttt{pymatgen.Structure} & 3D periodic unit cell: lattice $[\mathbf{a}, \mathbf{b}, \mathbf{c}]$, coords $(x_i, y_i, z_i)$, site species $Z_i$ & Atomistic graph construction \& coordinate featurization \\
+\texttt{formula} & Chemical Formula & Full stoichiometric formula (e.g., $\text{Li}_2\text{V}(\text{PO}_4)_2$, $\text{BaTiO}_3$) & Stoichiometric Magpie descriptor extraction \\
+\texttt{chemical\_system} & Hyphenated Elements & 3,169 distinct elemental combinations (30 unary, 944 binary, 2,671 ternary, 894 4-ary+) & GroupKFold chemical-system-disjoint split criterion \\
+\texttt{nsites} & Integer & Number of atomic sites per unit cell ($1 \le N_{\mathrm{sites}} \le 288$, median: $12$) & Graph node size \& packing descriptor \\
+\texttt{volume\_A3} & Floating Point & Unit-cell volume ($11.4$ to $3{,}998.5$~\AA$^3$, median: $214.4$~\AA$^3$) & Macroscopic global packing state $\mathbf{u}$ \\
+\texttt{density\_g\_cm3} & Floating Point & Mass density ($0.024$ to $16.002$~$\text{g/cm}^3$, median: $3.849$~$\text{g/cm}^3$) & Macroscopic global packing state $\mathbf{u}$ \\
+Space Group / System & Categorical / Integer & Space group number ($1 \le SG \le 230$) across all 7 crystal systems & Classical symmetry features \& structural analysis \\
+\texttt{target\_n} ($n$) & Floating Point & Scalar isotropic refractive index: $n = \sqrt{\frac{1}{3}\mathrm{Tr}(\boldsymbol{\epsilon}_{\infty})}$ ($1.000 \le n \le 62.063$) & Continuous ground-truth regression target \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}
 
 \subsection{Fold-Local Evaluation and Checkpoint-Selection Protocol}
 To reduce within-run evaluation bias, we used the following fold-local protocol:
@@ -208,7 +248,7 @@ $\Delta\mathrm{MAE}$ (DualHead vs. Global\_CGNN) & -0.0182 & -0.0119 & -0.0029 &
 \bottomrule
 \end{tabular}%
 }
-\par\vspace{3pt}\footnotesize\textsuperscript{a}Table 1 and Table 2 report the primary audited baseline CGCNN ($0.3298 \pm 0.0800$, 8~\AA\ cutoff, 180 epochs with plateau scheduling). An internal exploratory control variant evaluated during architecture screening with 25 epochs yielded $0.3290 \pm 0.0825$ (Fold 0: 0.2239, Fold 1: 0.3037, Fold 2: 0.4535, Fold 3: 0.3269, Fold 4: 0.3371; Supplementary Table S3); in both baseline implementations, DualHead--LogDirect GNN had lower MAE on each of the five corresponding outer folds. \textsuperscript{b}\texttt{Global\_CGNN} is an internal comparator using 4 global features.
+\par\vspace{3pt}\footnotesize\textsuperscript{a}Table~\ref{tab:baselines} and Table~\ref{tab:foldwise_wins} report the primary audited baseline CGCNN ($0.3298 \pm 0.0800$, 8~\AA\ cutoff, 180 epochs with plateau scheduling). An internal exploratory control variant evaluated during architecture screening with 25 epochs yielded $0.3290 \pm 0.0825$ (Fold 0: 0.2239, Fold 1: 0.3037, Fold 2: 0.4535, Fold 3: 0.3269, Fold 4: 0.3371; Supplementary Table S3); in both baseline implementations, DualHead--LogDirect GNN had lower MAE on each of the five corresponding outer folds. \textsuperscript{b}\texttt{Global\_CGNN} is an internal comparator using 4 global features.
 \end{table}
 
 \subsection{Systematic Component Ablation Study}
