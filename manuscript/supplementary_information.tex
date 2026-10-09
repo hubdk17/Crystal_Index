@@ -391,13 +391,13 @@ $n > 8.0$ (Extreme Tail) & 44 & 0.9\% & 13.5471 & 7.9025 & 19.2009 & 49.1346 & -
 \end{figure}
 
 \section*{Supplementary Note 8: Code, Data, and Checkpoint Manifests}
-The reproduction suite includes:
+The reproduction suite provided in the public repository includes end-to-end automated pipelines for:
 \begin{enumerate}
-    \item \texttt{src/13\_verify\_saved\_predictions.py}: Cryptographic verification of all 4{,}764 out-of-fold predictions.
-    \item \texttt{src/14\_verify\_official\_fold\_identity.py}: Bit-level verification of official MatBench v0.1 partition manifests.
-    \item \texttt{src/15\_reconstruct\_ensemble\_exact.py}: Bit-level reconstruction of ensemble weighting from inner validation.
-    \item \texttt{src/16\_train\_ood\_confirmation.py}: Deterministic reproduction of the 5-fold chemical-system GroupKFold evaluation.
+    \item Cryptographic verification of all 4{,}764 out-of-fold predictions and checksum manifests.
+    \item Bit-level verification of official MatBench v0.1 partition manifests.
+    \item Exact reconstruction of ensemble weighting from inner validation.
+    \item Deterministic reproduction of the five-fold chemical-system GroupKFold evaluation.
 \end{enumerate}
-All codebase components, trained PyTorch weights, prediction CSV files, and cryptographic SHA-256 manifests are preserved in the open repository at \href{https://github.com/hubdk17/Crystal_Index}{https://github.com/hubdk17/Crystal_Index}. Complete replication archives and model checkpoints are publicly accessible for peer review and independent replication.
+All codebase components, trained PyTorch weights, prediction manifests, and reproducibility scripts are preserved in the open repository at \href{https://github.com/hubdk17/Crystal_Index}{https://github.com/hubdk17/Crystal_Index}. Complete replication archives and model checkpoints are publicly accessible for peer review and independent replication.
 
 \end{document}
